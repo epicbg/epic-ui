@@ -1,0 +1,26 @@
+// FONT MIXINS
+
+@mixin font-face($name, $font-files, $weight: false, $style: false) {
+    @font-face {
+      font-family: quote($name);
+      src: $font-files;
+      @if $weight {
+        font-weight: $weight;
+      }
+      @if $style {
+        font-style: $style;
+      }
+    }
+}
+
+@mixin default-shadow(){
+  box-shadow: $default-shadow;
+}
+
+@mixin roboto(){
+  font-family: 'Roboto', sans-serif;
+}
+
+@mixin montserrat(){
+  font-family: 'Montserrat', sans-serif;
+}

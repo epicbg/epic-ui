@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+// Theme vars and colors
+
+$bg-color: #ffffff;
+
+$primary-color: #2980b9;
+$secondary-color: #95a5a6;
+$success-color: #2ecc71;
+$danger-color: #d62c1a;
+$warning-color: #f39c12;
+$info-color: #3498db;
+$light-color: #ffffff;
+$dark-color: #2c3e50;
+
+$default-button-text-color: #ffffff;
+$default-font-size: 14;
+
+$default-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.58);
+
+// Theme colors (created in helpers.scss)
+$theme-colors: (
+    "primary": $primary-color, 
+    "secondary": $secondary-color, 
+    "success": $success-color, 
+    "danger": $danger-color, 
+    "warning": $warning-color, 
+    "info": $info-color, 
+    "light": $light-color, 
+    "dark": $dark-color,
+    "flat": $bg-color
+    );
+
+
+// Button sizing
+$button-default-padding: 10;
+$button-vertical-padding: $button-default-padding - substracted-percentage($button-default-padding, 60);
+
+
+// Grid / Button sizes
+$sizes: 'xs', 'sm', 'md', 'lg', 'xl';
+
+
+// Navbar vars
+$nav-size: 65px;
+$nav-font-size: 16px;
+$nav-button-padding-size: (($nav-size - $nav-font-size) / 2) - 4px;
+
+// for position helpers mt-1 pt-1 etc.. loops to 10
+$helper-loop-length: 10;
+$helper-loop-start: 1;
+
+
+// multiplies 10 by loop number
+$helper-scaling: 10; 
+$helper-types: (
+    // margins
+    'mt': 'margin-top',
+    'ml': 'margin-left',
+    'mb': 'margin-bottom',
+    'mr': 'margin-right',
+    // paddings
+    'pt': 'padding-top',
+    'pl': 'padding-left',
+    'pb': 'padding-bottom',
+    'pr': 'padding-right',
+
+    // X and Y
+    'px': 'padding',
+    'mx': 'margin'
+);

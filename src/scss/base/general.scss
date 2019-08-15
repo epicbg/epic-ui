@@ -1,0 +1,33 @@
+html {
+    @include roboto();
+}
+
+body, form {
+    margin: 0;
+    padding: 0;
+    background: $bg-color;
+    font-size: $default-font-size;
+    @include roboto();
+}
+
+body, form, button, section, a, input, textarea, select {
+    @include roboto();
+}
+
+a {
+    color: $primary-color;
+    text-decoration: none;
+    &:hover {
+        color: darken($primary-color, 10%);
+    }
+}
+
+
+
+@for $i from 1 through 6 {
+    h#{$i}{
+        @include montserrat();
+        font-size: #{$default-font-size * 4 - substracted-percentage($default-font-size * 3, $i * 10)}px;
+        margin: 0; 
+    }
+}

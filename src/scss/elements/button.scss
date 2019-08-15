@@ -1,0 +1,21 @@
+
+.button {
+    border: none;
+    border-radius: 1px;
+    @include default-shadow();
+    padding: 10px 30px;
+}
+
+@for $i from 0 to length($sizes) {
+    .button.is-#{nth($sizes, $i + 1)}{
+        padding: #{$button-vertical-padding  + ($i * $button-vertical-padding)}px #{$button-default-padding + ($i * $button-default-padding)}px;  
+    }
+}
+
+@each $prefix, $hex  in $theme-colors {
+    .button.#{$prefix} { 
+        &:hover {
+            background-color: darken($hex, 5%);
+        }
+    }
+}

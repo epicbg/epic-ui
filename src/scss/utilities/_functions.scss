@@ -1,0 +1,3 @@
+@function substracted-percentage($number, $percentage){
+    @return ($percentage/100) * $number / 1;
+}

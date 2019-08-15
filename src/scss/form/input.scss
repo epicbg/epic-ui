@@ -1,0 +1,12 @@
+input:not([type="radio"]):not([type="checkbox"]), select{
+    padding: 5px 10px;
+    font-size: 20px;
+}
+
+
+select {
+    min-width: 273px;
+    background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") right center no-repeat; 
+    background-position: 96%;
+    appearance: none;
+}

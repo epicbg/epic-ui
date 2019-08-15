@@ -1,0 +1,32 @@
+.nav {
+    width: 100%;
+    height: $nav-size;
+    font-size: $nav-font-size;
+    text-transform: uppercase;
+    @include default-shadow();
+
+    .nav-left {
+        float: left;
+    }
+
+    .nav-right {
+        float: right;
+    }
+
+    .logo {
+        float: left;
+        width:270px;
+        img {
+            height: $nav-size;
+            width: auto;
+        }
+    }
+
+    .nav-right, .nav-left {
+        height: 100%;
+        display: flex;
+        a {
+            padding: $nav-button-padding-size 15px;
+        }
+    }
+}
