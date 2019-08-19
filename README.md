@@ -1,17 +1,14 @@
-<div style="width: 100%; display: table">
-    <div style="float:left">
-        <img src="docs/assets/images/epic-logo.JPG" height="180px" style="border-radius: 10px;margin-top:13px">
-    </div>
-    <div style="text-align: left; float: left; margin-left: 20px">
-        <h3>EPIC UI</h3>
-        <p style="max-width: 350px">Frontend css framework based on flexbox. Framework includes its own vanilla javascript functionalities for fast prototyping.  </p>
-        <a>Read Docs</a> / <a>Report bugs</a> / <a>Request feature</a>
+<div style="text-align: center">
+        <img src="docs/assets/images/epic-logo.png" height="180px" style="border-radius: 10px;margin-top:13px">
+        <h2>EPIC UI</h2>
+        <div>Frontend css framework based on flexbox. Framework includes its own vanilla javascript functionalities for fast prototyping.  </div>
+        <a href="https://ui.epicweb.bg/docs">Read Docs</a> / <a href="https://github.com/epicbg/epic-ui/issues">Report bugs</a> / <a href="https://github.com/epicbg/epic-ui/issues">Request feature</a>
     </div>
 </div>
 
 
 # Installation
-You can include only css file from the framework but components which have 'js' in website tag will not work.For full docs <a>read here</a>.
+You can include only css file from the framework but components which have 'js' in website tag will not work.For full docs <a href="https://ui.epicweb.bg/docs">read here</a>.
 
 
 * NPM `npm install epic-ui`
