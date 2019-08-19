@@ -4,7 +4,6 @@
     .#{$name} {
         background-color: $color;
         color: $default-button-text-color;
-        cursor: pointer;
 
         @if $name == 'light' or $name == 'flat'{
             color: $dark-color;
@@ -15,11 +14,20 @@
     }
 }
 
+// Margin and padding helpers (configured in variables)
+
 @each $prefix, $prop in $helper-types {
     @for $i from $helper-loop-start through $helper-loop-length {
         .#{$prefix}-#{$i} {
             #{$prop}: #{$helper-scaling * $i}px;
         }
+    }
+}
+
+@each $size-name, $size in $image-sizes {
+    .#{$size-name}{
+        width: $size;
+        height: $size;
     }
 }
 

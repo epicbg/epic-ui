@@ -1,0 +1,8 @@
+.tag {
+    width: auto;
+    position:relative;
+    display: inline;
+    border-radius: 3px;
+    padding: 3px 9px;
+    @include default-shadow();
+}

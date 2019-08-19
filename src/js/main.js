@@ -1,48 +1,46 @@
-import jquery from 'jquery'
-window.jquery = jquery
+// UI dependencies
+import render from './render'
+import selector from './selector'
+import watcher from './watcher'
+
+// Third party libs
+import axios from 'axios'
 class ui {
     constructor(props){
+        // Variables and classes
         this.props = props
-        this.render()
-        this.watchData()
+        this.render = render
+        this.selector = selector
+        this.watch = watcher
+
+        // Third party libs
+        this.request = axios
+
+        // Listeners and renderers
+        this.renderHTML()
+        this.watchDirectives()
+        
+        // Call ui constructor
+        props.created.call(this);
     }
 
-    create(props){
-        this.props = props
+    // Convert directives to rendered html
+    renderHTML(){
+        this.selector.findDirectives('ui-bind').forEach(el => this.render.uiBindDirective.call(this, el))
+        this.selector.findDirectives('ui-text').forEach(el => this.render.uiTextDirective.call(this, el))
+        this.selector.findDirectives('ui-for').forEach(el => this.render.uiForDirective.call(this, el))
+        this.selector.findDirectives('ui-if').forEach(el => this.render.uiIfDirective.call(this, el))
+        this.selector.findDirectives('ui').forEach(el => this.render.uiDirective.call(this, el))
     }
 
-    render(){
-        document.querySelectorAll('[ui-bind]').forEach(el => {
-            let attr = el.getAttribute('ui-bind')
-            el.value = this.props.data[attr]
-        })
-        document.querySelectorAll('[ui-text]').forEach(el => {
-            let attr = el.getAttribute('ui-text')
-            el.innerHTML = this.props.data[attr]
-        })
-        document.querySelectorAll('[ui]').forEach(el => {
-            let ui_data = el.getAttribute('ui').split(':')
-            el.setAttribute(ui_data[0], this.props.data[ui_data[1]])
-        })
-    }
+    // Watch ui directives for change
+    watchDirectives(){
 
-    watchData(){
-        document.querySelectorAll('[ui-bind]').forEach(el => {
-            el.addEventListener('input', (e) => this.setDataPropVal(e, this))
-        })
-        document.querySelectorAll('[ui-on]').forEach(el => {
-            let ui_data = el.getAttribute('ui-on').split(':')
-            el.addEventListener(ui_data[0], (e) => {
-                this.props.methods[ui_data[1]].call(this, e)
-                this.render()
-            })
-        })
-    }
+        // Two way binding
+        this.selector.findDirectives('ui-bind').forEach(el => this.watch.binding.call(this, el))
 
-    setDataPropVal(e, context){
-        let attr = e.target.getAttribute('ui-bind')
-        context.props.data[attr] = e.target.value
-        context.render()
+        // UI event handler
+        this.selector.findDirectives('ui-on').forEach(el => this.watch.method.call(this, el))
     }
 }
 

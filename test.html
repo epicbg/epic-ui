@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" type="text/css" href="dist/css/epic-ui.css">
+    <script src="dist/js/epic-ui.js"></script>
     <title>Epic UI test</title>
 </head>
 <body>
@@ -21,13 +22,13 @@
         </div>
     </nav>
     <div>
-        <h1>Buttons</h1>
+        <h1 ui-if="show_button">Buttons</h1>
 
-        <button class="button primary is-xs">Create new entity</button>
+        <button class="button primary is-xs" ui-on="click:toggleButton">Toggle title</button>
         <button class="button seconary is-sm">Create new entity</button>
         <button class="button success is-md">Create new entity</button>
         <button class="button danger is-lg">Create new entity</button>
-        <button class="button warning is-xl">Create new entity</button>
+        <button class="button warning oval is-xl">Create new entity</button>
         <button class="button info is-lg">Create new entity</button>
         <button class="button light is-md">Create new entity</button>
         <button class="button dark is-sm">Create new entity</button>
@@ -55,9 +56,10 @@
         <input type="text">
     </div>
 
-    <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit ratione ipsam veniam nam nesciunt a ea! Illum tenetur fuga repudiandae porro sit, autem dolores ea temporibus hic sunt itaque labore!
-    </p>
+    <button ui-on="click:addTodo">add Todo</button>
+    <div ui-for="todo in todos">
+        <div ui-text="todo"></div>
+    </div>
 
 
     <div class="card">
@@ -78,5 +80,147 @@
         </div>
     </div>
 
+    <div>
+        <h1>tooltip icons</h1>
+        <div style="display: flex; justify-content: space-around">
+            <div class="tooltip-icon">
+                <div class="icon">
+                    <img src="https://cdn.onlinewebfonts.com/svg/img_94880.png" alt="">
+                </div>
+                <div class="text">
+                    neshto sidsajdasljdsadasdadasd
+                </div>
+            </div>
+            <div class="tooltip-icon">
+                <div class="icon">
+                    <img src="https://cdn.onlinewebfonts.com/svg/img_94880.png" alt="">
+                </div>
+                <div class="text">
+                    neshto sidsajdasljdsadasdadasd
+                </div>
+            </div>
+            <div class="tooltip-icon">
+                <div class="icon">
+                    <img src="https://cdn.onlinewebfonts.com/svg/img_94880.png" alt="">
+                </div>
+                <div class="text">
+                    neshto sidsajdasljdsadasdadasd
+                </div>
+            </div>
+            <div class="tooltip-icon">
+                <div class="icon">
+                    <img src="https://cdn.onlinewebfonts.com/svg/img_94880.png" alt="">
+                </div>
+                <div class="text">
+                    neshto sidsajdasljdsadasdadasd
+                </div>
+            </div>
+            <div class="tooltip-icon">
+                <div class="icon">
+                    <img src="https://cdn.onlinewebfonts.com/svg/img_94880.png" alt="">
+                </div>
+                <div class="text">
+                    neshto sidsajdasljdsadasdadasd
+                </div>
+            </div>
+            <div class="tooltip-icon">
+                <div class="icon">
+                    <img src="https://cdn.onlinewebfonts.com/svg/img_94880.png" alt="">
+                </div>
+                <div class="text">
+                    neshto sidsajdasljdsadasdadasd
+                </div>
+            </div>
+            <div class="tooltip-icon">
+                <div class="icon">
+                    <img src="https://cdn.onlinewebfonts.com/svg/img_94880.png" alt="">
+                </div>
+                <div class="text">
+                    neshto sidsajdasljdsadasdadasd
+                </div>
+            </div>
+            <div class="tooltip-icon">
+                <div class="icon">
+                    <img src="https://cdn.onlinewebfonts.com/svg/img_94880.png" alt="">
+                </div>
+                <div class="text">
+                    neshto sidsajdasljdsadasdadasd
+                </div>
+            </div>
+            <div class="tooltip-icon">
+                <div class="icon">
+                    <img src="https://cdn.onlinewebfonts.com/svg/img_94880.png" alt="">
+                </div>
+                <div class="text">
+                    neshto sidsajdasljdsadasdadasd
+                </div>
+            </div>
+            <div class="tooltip-icon">
+                <div class="icon">
+                    <img src="https://cdn.onlinewebfonts.com/svg/img_94880.png" alt="">
+                </div>
+                <div class="text">
+                    neshto sidsajdasljdsadasdadasd
+                </div>
+            </div>
+            <div class="tooltip-icon">
+                <div class="icon">
+                    <img src="https://cdn.onlinewebfonts.com/svg/img_94880.png" alt="">
+                </div>
+                <div class="text">
+                    neshto sidsajdasljdsadasdadasd
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <h1>Avatars</h1>
+        <img class="avatar size-64" src="https://www.rd.com/wp-content/uploads/2017/09/01-shutterstock_476340928-Irina-Bg.jpg">
+        <img class="avatar size-48" src="https://www.rd.com/wp-content/uploads/2017/09/01-shutterstock_476340928-Irina-Bg.jpg">
+        <img class="avatar size-32" src="https://www.rd.com/wp-content/uploads/2017/09/01-shutterstock_476340928-Irina-Bg.jpg">
+        <img class="avatar size-26" src="https://www.rd.com/wp-content/uploads/2017/09/01-shutterstock_476340928-Irina-Bg.jpg">
+        <img class="avatar size-16" src="https://www.rd.com/wp-content/uploads/2017/09/01-shutterstock_476340928-Irina-Bg.jpg">
+        <img class="avatar size-8" src="https://www.rd.com/wp-content/uploads/2017/09/01-shutterstock_476340928-Irina-Bg.jpg">
+    </div>
+    <div>
+        <h1>Tags</h1>
+        <div class="tag primary">asdasdasdasd</div>
+
+        <div class="tag danger">asdasdasd</div>
+        <div class="tag dark">asdasdasd</div>
+        <div class="tag warning">asdasdasd</div>
+        <div class="tag secondary">asdasdasd</div>
+        <div class="tag">asdasdasd</div>
+    </div>
+    <div>
+        <h1>Progress</h1>
+        
+        <h3>Indeterminate</h3>
+        <div class="progress progress-dark">
+            <div class="loading-bar"></div>
+        </div>
+
+        
+        <h3>Determinate</h3>
+        <div class="progress progress-dark">
+            <div class="fixed-bar" style="width: 70%"></div>
+        </div>
+    </div>
+
 </body>
+<script>
+    new ui({
+        created(){
+            this.request.get('https://jsonplaceholder.typicode.com/todos/1')
+        },
+        data: {
+            todos: []
+        },
+        methods: {
+            addTodo(){
+                this.props.data.todos.push('todo')
+            }
+        }
+    })
+</script>
 </html>
