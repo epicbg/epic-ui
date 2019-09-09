@@ -2,8 +2,9 @@
 
 @each $name, $color in $theme-colors {
     .#{$name} {
-        background-color: $color;
         color: $default-button-text-color;
+        background-color: $color;
+        border: 1px solid $color;
 
         @if $name == 'light' or $name == 'flat'{
             color: $dark-color;
@@ -12,7 +13,13 @@
             }
         }
     }
+    .o-#{$name} {
+        background-color: white;
+        color: $color;
+        border: 1px solid $color;
+    }
 }
+
 
 // Margin and padding helpers (configured in variables)
 
@@ -34,6 +41,10 @@
 .full-width {
     width: 100%;
     margin: 0 0 !important;
+}
+
+.full-height {
+    height: 100%;
 }
 
 

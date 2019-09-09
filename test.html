@@ -4,222 +4,125 @@
     <link rel="stylesheet" type="text/css" href="dist/css/epic-ui.css">
     <script src="dist/js/epic-ui.js"></script>
     <title>Epic UI test</title>
+    <style>
+        .box {
+            padding: 10px;
+            margin-left: 10px;
+            background: blue;
+            height: 200px;
+        }
+    </style>
 </head>
 <body>
     <nav class="nav">
+        <div class="home">
+            <img src="https://image.flaticon.com/icons/png/512/70/70370.png">
+        </div>
         <div class="logo">
-            <img  src="https://631nj1ki9k11gbkhx39b3qpz-wpengine.netdna-ssl.com/wp-content/uploads/2014/12/ff-logo.png">
+            <img  src="http://epicweb.bg/img/Group 2.svg">
         </div>
-        <div class="nav-left">
-            <a href="/">asdads</a>
-            <a href="/">asdads</a>
-            <a href="/">asdads</a>
-            <a href="/">asdads</a>
+        <div class="nav-links">
+            <div class="nav-left">
+                <a class="active" href="/">asdads</a>
+                <a href="/">asdads</a>
+                <a href="/">asdads</a>
+                <a href="/">asdads</a>
+            </div>
+            <div class="nav-right">
+                <a href="/">login
+                
+            <span class="badge primary">3</span></a>
+                <a href="/">register</a>
+            </div>
         </div>
-        <div class="nav-right">
-            <a href="/">login</a>
-            <a href="/">register</a>
+        <div class="burger" toggler>
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
+        
     </nav>
-    <div>
-        <h1 ui-if="show_button">Buttons</h1>
 
-        <button class="button primary is-xs" ui-on="click:toggleButton">Toggle title</button>
-        <button class="button seconary is-sm">Create new entity</button>
-        <button class="button success is-md">Create new entity</button>
-        <button class="button danger is-lg">Create new entity</button>
-        <button class="button warning oval is-xl">Create new entity</button>
-        <button class="button info is-lg">Create new entity</button>
-        <button class="button light is-md">Create new entity</button>
-        <button class="button dark is-sm">Create new entity</button>
-        <button class="button dark is-xs">Create new entity</button>
-        
-    </div>
-    <div>
-        <h1>Links</h1>
-        <a href="/">link me to god</a>
-    </div>
-    <div>
-        <h1>Headings</h1>
-        <h2>Headings</h2>
-        <h3>Headings</h3>
-        <h4>Headings</h4>
-        <h5>Headings</h5>
-        <h6>Headings</h6>
-    </div>
+    
+    <main>
+        <div class="container">
+            <div class="row">
 
-    <select class="full-width" id="">
-        <option value="">Test</option>
-    </select>
-
-    <div>
-        <input type="text">
-    </div>
-
-    <button ui-on="click:addTodo">add Todo</button>
-    <div ui-for="todo in todos">
-        <div ui-text="todo"></div>
-    </div>
-
-
-    <div class="card">
-        <div class="header">
-
-        </div>
-        <div class="image">
-            <img src="https://www.ctvnews.ca/polopoly_fs/1.4037876!/httpImage/image.jpg_gen/derivatives/landscape_1020/image.jpg" alt="">
-        </div>
-        <div class="heading">Lorem ipsum dolor sit amet consectetur adipisicing elit</div>
-        <div class="text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt voluptatum quae perspiciatis! Nostrum, id? Fuga deserunt officia exercitationem accusantium sed temporibus. Laborum eius labore veritatis laboriosam in nam. Id, ullam.
-        </div>
-        <div class="actions">
-                <button class="button flat is-md">Like</button>
-                <button class="button flat is-md">Comment</button>
-                <button class="button flat is-md">Share</button>
-        </div>
-    </div>
-
-    <div>
-        <h1>tooltip icons</h1>
-        <div style="display: flex; justify-content: space-around">
-            <div class="tooltip-icon">
-                <div class="icon">
-                    <img src="https://cdn.onlinewebfonts.com/svg/img_94880.png" alt="">
+                <div class="card col xs12 sm6 mt-3">
+                    <div class="media">
+                        <img src="https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                    </div>
+                    <div class="headline">Culpa accusamus numquam porro totam maxime iste impedit ipsa.</div>
+                    <div class="text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, dolorum! Voluptatem odit a eius illum assumenda sunt vel libero pariatur quis. Culpa accusamus numquam porro totam maxime iste impedit ipsa.
+                    </div>
+                    <div class="actions">
+                        <button class="button is-lg flat">do something</button>
+                        <button class="button is-lg flat">do something</button>
+                        <button class="button is-lg flat">do something</button>
+                    </div>
                 </div>
-                <div class="text">
-                    neshto sidsajdasljdsadasdadasd
+                <div class="card col xs12 sm6 mt-3">
+                    <div class="media">
+                        <img src="https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                    </div>
+                    <div class="headline">Culpa accusamus numquam porro totam maxime iste impedit ipsa.</div>
+                    <div class="text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, dolorum! Voluptatem odit a eius illum assumenda sunt vel libero pariatur quis. Culpa accusamus numquam porro totam maxime iste impedit ipsa.
+                    </div>
+                    <div class="actions">
+                        <button class="button is-lg flat">do something</button>
+                        <button class="button is-lg flat">do something</button>
+                        <button class="button is-lg flat">do something</button>
+                    </div>
                 </div>
-            </div>
-            <div class="tooltip-icon">
-                <div class="icon">
-                    <img src="https://cdn.onlinewebfonts.com/svg/img_94880.png" alt="">
+                <div class="card col xs12 sm6 mt-3">
+                    <div class="media">
+                        <img src="https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                    </div>
+                    <div class="headline">Culpa accusamus numquam porro totam maxime iste impedit ipsa.</div>
+                    <div class="text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, dolorum! Voluptatem odit a eius illum assumenda sunt vel libero pariatur quis. Culpa accusamus numquam porro totam maxime iste impedit ipsa.
+                    </div>
+                    <div class="actions">
+                        <button class="button is-lg flat">do something</button>
+                        <button class="button is-lg flat">do something</button>
+                        <button class="button is-lg flat">do something</button>
+                    </div>
                 </div>
-                <div class="text">
-                    neshto sidsajdasljdsadasdadasd
-                </div>
-            </div>
-            <div class="tooltip-icon">
-                <div class="icon">
-                    <img src="https://cdn.onlinewebfonts.com/svg/img_94880.png" alt="">
-                </div>
-                <div class="text">
-                    neshto sidsajdasljdsadasdadasd
-                </div>
-            </div>
-            <div class="tooltip-icon">
-                <div class="icon">
-                    <img src="https://cdn.onlinewebfonts.com/svg/img_94880.png" alt="">
-                </div>
-                <div class="text">
-                    neshto sidsajdasljdsadasdadasd
-                </div>
-            </div>
-            <div class="tooltip-icon">
-                <div class="icon">
-                    <img src="https://cdn.onlinewebfonts.com/svg/img_94880.png" alt="">
-                </div>
-                <div class="text">
-                    neshto sidsajdasljdsadasdadasd
-                </div>
-            </div>
-            <div class="tooltip-icon">
-                <div class="icon">
-                    <img src="https://cdn.onlinewebfonts.com/svg/img_94880.png" alt="">
-                </div>
-                <div class="text">
-                    neshto sidsajdasljdsadasdadasd
-                </div>
-            </div>
-            <div class="tooltip-icon">
-                <div class="icon">
-                    <img src="https://cdn.onlinewebfonts.com/svg/img_94880.png" alt="">
-                </div>
-                <div class="text">
-                    neshto sidsajdasljdsadasdadasd
-                </div>
-            </div>
-            <div class="tooltip-icon">
-                <div class="icon">
-                    <img src="https://cdn.onlinewebfonts.com/svg/img_94880.png" alt="">
-                </div>
-                <div class="text">
-                    neshto sidsajdasljdsadasdadasd
-                </div>
-            </div>
-            <div class="tooltip-icon">
-                <div class="icon">
-                    <img src="https://cdn.onlinewebfonts.com/svg/img_94880.png" alt="">
-                </div>
-                <div class="text">
-                    neshto sidsajdasljdsadasdadasd
-                </div>
-            </div>
-            <div class="tooltip-icon">
-                <div class="icon">
-                    <img src="https://cdn.onlinewebfonts.com/svg/img_94880.png" alt="">
-                </div>
-                <div class="text">
-                    neshto sidsajdasljdsadasdadasd
-                </div>
-            </div>
-            <div class="tooltip-icon">
-                <div class="icon">
-                    <img src="https://cdn.onlinewebfonts.com/svg/img_94880.png" alt="">
-                </div>
-                <div class="text">
-                    neshto sidsajdasljdsadasdadasd
+                <div class="card col xs12 sm6 mt-3">
+                    <div class="media">
+                        <img src="https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+                    </div>
+                    <div class="headline">Culpa accusamus numquam porro totam maxime iste impedit ipsa.</div>
+                    <div class="text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, dolorum! Voluptatem odit a eius illum assumenda sunt vel libero pariatur quis. Culpa accusamus numquam porro totam maxime iste impedit ipsa.
+                    </div>
+                    <div class="actions">
+                        <button class="button is-lg flat">do something</button>
+                        <button class="button is-lg flat">do something</button>
+                        <button class="button is-lg flat">do something</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div>
-        <h1>Avatars</h1>
-        <img class="avatar size-64" src="https://www.rd.com/wp-content/uploads/2017/09/01-shutterstock_476340928-Irina-Bg.jpg">
-        <img class="avatar size-48" src="https://www.rd.com/wp-content/uploads/2017/09/01-shutterstock_476340928-Irina-Bg.jpg">
-        <img class="avatar size-32" src="https://www.rd.com/wp-content/uploads/2017/09/01-shutterstock_476340928-Irina-Bg.jpg">
-        <img class="avatar size-26" src="https://www.rd.com/wp-content/uploads/2017/09/01-shutterstock_476340928-Irina-Bg.jpg">
-        <img class="avatar size-16" src="https://www.rd.com/wp-content/uploads/2017/09/01-shutterstock_476340928-Irina-Bg.jpg">
-        <img class="avatar size-8" src="https://www.rd.com/wp-content/uploads/2017/09/01-shutterstock_476340928-Irina-Bg.jpg">
-    </div>
-    <div>
-        <h1>Tags</h1>
-        <div class="tag primary">asdasdasdasd</div>
-
-        <div class="tag danger">asdasdasd</div>
-        <div class="tag dark">asdasdasd</div>
-        <div class="tag warning">asdasdasd</div>
-        <div class="tag secondary">asdasdasd</div>
-        <div class="tag">asdasdasd</div>
-    </div>
-    <div>
-        <h1>Progress</h1>
-        
-        <h3>Indeterminate</h3>
-        <div class="progress progress-dark">
-            <div class="loading-bar"></div>
-        </div>
-
-        
-        <h3>Determinate</h3>
-        <div class="progress progress-dark">
-            <div class="fixed-bar" style="width: 70%"></div>
-        </div>
-    </div>
-
+    </main>
+    
 </body>
 <script>
-    new ui({
+    window.app = new ui({
         created(){
+            // this.alert.fire({
+            //     toast: true,
+            //     position: 'bottom-end',
+            //     title: 'asdasdasdasdadasdad',
+            //     type: 'success',
+            //     showConfirmButton: false
+            // })
             this.request.get('https://jsonplaceholder.typicode.com/todos/1')
         },
         data: {
-            todos: []
-        },
-        methods: {
-            addTodo(){
-                this.props.data.todos.push('todo')
-            }
+            text: 'asd'
         }
     })
 </script>

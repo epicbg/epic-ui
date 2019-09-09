@@ -1,10 +1,16 @@
 html {
     @include roboto();
+    height: 100%;
+    width: 100%;
 }
 
+
 body, form {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
     margin: 0;
-    padding: 200px 0px;
     background: $bg-color;
     font-size: $default-font-size;
     @include roboto();
@@ -15,19 +21,26 @@ body, form, button, section, a, input, textarea, select {
 }
 
 a {
-    color: $primary-color;
+    color: #2c3e50;
     text-decoration: none;
     &:hover {
-        color: darken($primary-color, 10%);
+        color: darken(#2c3e50, 20%);
     }
 }
+
+* {
+    -webkit-transition: all 0.1s ease;
+    -moz-transition:    all 0.1s ease;
+    -ms-transition:     all 0.1s ease;
+    -o-transition:      all 0.1s ease;
+  }
 
 
 
 @for $i from 1 through 6 {
     h#{$i}{
         @include montserrat();
-        font-size: #{$default-font-size * 4 - substracted-percentage($default-font-size * 3, $i * 10)}px;
+        font-size: #{$default-font-size * 3 - substracted-percentage($default-font-size * 3, $i * 10)}px;
         margin: 0; 
     }
 }

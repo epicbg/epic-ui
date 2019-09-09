@@ -1,8 +1,9 @@
 .tag {
     width: auto;
-    position:relative;
     display: inline;
-    border-radius: 3px;
-    padding: 3px 9px;
+    padding: 3px 20px 4px 20px;
+    border-radius: 100px;
+    font-weight: 400;
+    cursor:  pointer;
     @include default-shadow();
 }

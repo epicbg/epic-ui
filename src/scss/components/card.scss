@@ -1,17 +1,17 @@
 .card {
     width: 500px;
-    border-radius: 5px;
+    border-radius: $card-border-radius;
     @include default-shadow();
 
-    .image img {
+    .media img {
         width: 100%;
         height: auto;
-        border-top-right-radius: 5px;
-        border-top-left-radius: 5px;
+        border-top-right-radius: $card-border-radius;
+        border-top-left-radius: $card-border-radius;
     }
-    .heading {
+    .headline {
         padding: 10px;
-        @extend h6;
+        @extend h4;
     }
     .text {
         padding: 10px;

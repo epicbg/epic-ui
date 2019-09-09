@@ -1,10 +1,11 @@
 .nav {
     width: 100%;
-    height: $nav-size;
+    min-height: $nav-size;
     font-size: $nav-font-size;
     text-transform: uppercase;
     @include default-shadow();
-
+    background-color: $bg-color;
+    // position: relative;
     .nav-left {
         float: left;
     }
@@ -14,12 +15,15 @@
     }
 
     .logo {
-        float: left;
-        width:270px;
         img {
             height: $nav-size;
             width: auto;
+            float:left;
         }
+    }
+
+    .home {
+        display: none;
     }
 
     .nav-right, .nav-left {
@@ -27,6 +31,173 @@
         display: flex;
         a {
             padding: $nav-button-padding-size 15px;
+            &:hover {
+                border-bottom: 2px solid purple;
+            }
+        }
+    }
+
+    .burger {
+        display: none;
+        float:right;
+        cursor: pointer;
+        padding: 10px 20px;
+
+        div {
+            margin-top: 10px;
+            border-radius: 20px;
+            width: 35px;
+            height: 3px;
+            background-color: $dark-color;
+        }
+    }
+
+    .active {
+        border-bottom: 2px solid purple;
+        color: purple;
+    }
+}
+
+.nav-aside {
+    float: left;
+    display: flex;
+    flex-direction: column;
+    @include default-shadow();
+    background-color: $bg-color;
+    min-width: 250px;
+    a {
+        display: block;
+        padding: 15px 20px;
+        border-bottom: 1px solid #ecf0f1;
+        &:hover {
+            border-bottom: 1px solid purple;
+        }
+    }
+
+    .active {
+        border-bottom: 1px solid purple;
+        color: purple;
+    }
+
+    .link-dropdown {
+        a {
+            // &:after {
+            //     content: 'v';
+            //     float:right;
+            // }
+        }
+        .dropdown {
+            display: none;
+            margin-left: 25px;
+            padding-bottom: 20px;
+            a {
+                padding-left: 5px;
+                // &:after {
+                //     content: '';
+                //     float:right;
+                // }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: #{map-get($sizes-with-breakpoints, 'md')}px){
+    .nav {
+        position:fixed;
+        bottom: 0px;
+        box-shadow: 1px 0px 4px -3px rgba(0, 0, 0, 0.58);
+        display: flex;
+        justify-content: space-around;
+        .nav-links {
+            display: none;
+        }
+        .nav-links.toggled {
+            display: flex;
+        }
+
+        .active {
+            border-left: 2px solid purple;
+            border-right: 2px solid purple;
+            border-bottom: 0px;
+        }
+        .nav-links {
+            .nav-right, .nav-left {
+                display: flex;
+                flex-direction: column;
+                a {
+                    text-align: center;
+                    &:hover {
+
+                        border-left: 2px solid purple;
+                        border-right: 2px solid purple;
+                        border-bottom: 0px;
+                    }
+                }
+            }
+            .nav-left {
+                height: auto;
+                margin-top: 150px;
+            }
+            flex-direction: column;
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            bottom: $nav-size;
+            background:white;    
+        }
+
+        .home {
+            display: block;
+            padding: 10px;
+            img {
+                height: 40px;
+            }
+        }
+
+        .logo {
+            padding: 10px;
+            img {
+                height: $nav-size - 20px !important;
+                border-radius: 3px;
+            }
+        }
+
+        .burger {
+            padding: 10px;
+            display: block;
+        }
+    }
+
+    .nav-aside {
+        flex-direction: row;
+        float: inherit;
+        width:100%;
+        -ms-overflow-style: none;  // IE 10+
+        scrollbar-width: none;  // Firefox
+        &::-webkit-scrollbar { 
+            display: none;
+        }
+        &::-moz-scrollbar { 
+            display: none;
+        }
+        // visible in menu link
+        a {
+            padding: 15px 40px;
+        }
+        .link-dropdown {
+            .dropdown {
+                @include default-shadow();
+                position: absolute;
+                background: white;
+                margin-left: 0px;
+                padding-bottom: 0px;
+                a {
+                    margin: 0px;
+                    padding-left: inherit;
+                    padding: 15px 40px;
+                }
+            }
         }
     }
 }

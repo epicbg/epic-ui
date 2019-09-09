@@ -1,12 +1,19 @@
+// 3rd party dependencies
+import alert from 'sweetalert2'
+
+
 // UI dependencies
-import render from './render'
-import selector from './selector'
-import watcher from './watcher'
+import render from './framework/render'
+import selector from './framework/selector'
+import watcher from './framework/watcher'
+import components from './framework/components'
 
 // Third party libs
 import axios from 'axios'
-class ui {
+class ui extends components {
     constructor(props){
+        super();
+
         // Variables and classes
         this.props = props
         this.render = render
@@ -15,6 +22,7 @@ class ui {
 
         // Third party libs
         this.request = axios
+        this.alert = alert
 
         // Listeners and renderers
         this.renderHTML()
@@ -22,6 +30,7 @@ class ui {
         
         // Call ui constructor
         props.created.call(this);
+
     }
 
     // Convert directives to rendered html

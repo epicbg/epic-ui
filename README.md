@@ -8,7 +8,7 @@
 
 
 # Installation
-You can include only css file from the framework but components which have 'js' in website tag will not work.For full docs <a href="https://ui.epicweb.bg/docs">read here</a>.
+You can include only the css files, but some components won't be functional like in the demos <a href="https://ui.epicweb.bg/docs">read here</a>.
 
 
 * NPM `npm install epic-ui`
@@ -19,4 +19,15 @@ You can include only css file from the framework but components which have 'js' 
 * <a>DOWNLOAD</a> and link the files
 `<link href="vendor/epic-ui/dist/css/epic-ui.min.css"></link>` 
 `<script src="vendor/epic-ui/dist/js/epic-ui.min.js"></script>`
+
+# About EUI
+The purpose of this framework is to make web development extremely fast and replace the need to include other libraries in your project for eg (notifiaction, requests, alerts, js frameworks, css frameworks). 
+
+#### Join our slack
+
+
+
+
+
+
 

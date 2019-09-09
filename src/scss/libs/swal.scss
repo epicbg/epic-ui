@@ -1,0 +1,12 @@
+.swal2-popup {
+    .swal2-actions {
+        justify-content: flex-end;
+
+        .swal2-confirm {
+            background-color: purple;        
+        }
+    }
+    .swal2-icon.swal2-success [class^=swal2-success-line]{
+        background: purple;
+    }
+}
