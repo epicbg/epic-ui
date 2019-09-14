@@ -1,11 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap);@import url(https://fonts.googleapis.com/css?family=Montserrat&display=swap);html {
-  font-family: 'Roboto', sans-serif;
-  height: 100%;
-  width: 100%;
-}
-
-body,
-form {
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap);@import url(https://fonts.googleapis.com/css?family=Montserrat&display=swap);body,
+html {
   overflow-x: hidden;
   overflow-y: auto;
   margin: 0;
