@@ -14,7 +14,7 @@
     </style>
 </head>
 <body>
-    <nav class="nav">
+    <nav class="nav" id="primary-nav">
         <div class="home">
             <img src="https://image.flaticon.com/icons/png/512/70/70370.png">
         </div>
@@ -112,13 +112,9 @@
 <script>
     window.app = new ui({
         created(){
-            // this.alert.fire({
-            //     toast: true,
-            //     position: 'bottom-end',
-            //     title: 'asdasdasdasdadasdad',
-            //     type: 'success',
-            //     showConfirmButton: false
-            // })
+            ui.swiper('#primary-nav').onLeft(function(e){
+                console.log('asd')
+            })
             this.request.get('https://jsonplaceholder.typicode.com/todos/1')
         },
         data: {

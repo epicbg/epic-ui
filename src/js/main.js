@@ -1,6 +1,8 @@
 // 3rd party dependencies
 import alert from 'sweetalert2'
 
+// Helpers
+import swiper from './helpers/swiper'
 
 // UI dependencies
 import render from './framework/render'
@@ -50,6 +52,10 @@ class ui extends components {
 
         // UI event handler
         this.selector.findDirectives('ui-on').forEach(el => this.watch.method.call(this, el))
+    }
+
+    static swiper(el){
+        return new swiper(el);
     }
 }
 

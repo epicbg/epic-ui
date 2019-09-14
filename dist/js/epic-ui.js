@@ -17929,7 +17929,7 @@ function () {
 
           if (links_wrapper) {
             // links_wrapper[0].classList.toggle('toggled')
-            if (links_wrapper[0].style.display == 'none') {
+            if (links_wrapper[0].style.display == 'none' || !links_wrapper[0].style.display) {
               gsap_all__WEBPACK_IMPORTED_MODULE_0__["TweenLite"].fromTo(links_wrapper, 0.1, {
                 x: 400
               }, {
@@ -17937,10 +17937,10 @@ function () {
                 display: 'flex'
               });
             } else {
-              gsap_all__WEBPACK_IMPORTED_MODULE_0__["TweenLite"].fromTo(links_wrapper, 0.3, {
+              gsap_all__WEBPACK_IMPORTED_MODULE_0__["TweenLite"].fromTo(links_wrapper, 0.1, {
                 x: 0
               }, {
-                x: 400,
+                x: -400,
                 display: 'none'
               });
             }
@@ -18444,6 +18444,109 @@ function () {
 
 /***/ }),
 
+/***/ "./src/js/helpers/swiper.js":
+/*!**********************************!*\
+  !*** ./src/js/helpers/swiper.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Swipe; });
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+// DETECTS SWIPE
+var Swipe =
+/*#__PURE__*/
+function () {
+  function Swipe(element) {
+    _classCallCheck(this, Swipe);
+
+    this.xDown = null;
+    this.yDown = null;
+    this.element = typeof element === 'string' ? document.querySelector(element) : element;
+    this.element.addEventListener('touchstart', function (evt) {
+      this.xDown = evt.touches[0].clientX;
+      this.yDown = evt.touches[0].clientY;
+    }.bind(this), false);
+  }
+
+  _createClass(Swipe, [{
+    key: "onLeft",
+    value: function onLeft(callback) {
+      this.onLeft = callback;
+      return this;
+    }
+  }, {
+    key: "onRight",
+    value: function onRight(callback) {
+      this.onRight = callback;
+      return this;
+    }
+  }, {
+    key: "onUp",
+    value: function onUp(callback) {
+      this.onUp = callback;
+      return this;
+    }
+  }, {
+    key: "onDown",
+    value: function onDown(callback) {
+      this.onDown = callback;
+      return this;
+    }
+  }, {
+    key: "handleTouchMove",
+    value: function handleTouchMove(evt) {
+      if (!this.xDown || !this.yDown) {
+        return;
+      }
+
+      var xUp = evt.touches[0].clientX;
+      var yUp = evt.touches[0].clientY;
+      this.xDiff = this.xDown - xUp;
+      this.yDiff = this.yDown - yUp;
+
+      if (Math.abs(this.xDiff) > Math.abs(this.yDiff)) {
+        // Most significant.
+        if (this.xDiff > 0) {
+          this.onLeft();
+        } else {
+          this.onRight();
+        }
+      } else {
+        if (this.yDiff > 0) {
+          this.onUp();
+        } else {
+          this.onDown();
+        }
+      } // Reset values.
+
+
+      this.xDown = null;
+      this.yDown = null;
+    }
+  }, {
+    key: "run",
+    value: function run() {
+      this.element.addEventListener('touchmove', function (evt) {
+        this.handleTouchMove(evt).bind(this);
+      }.bind(this), false);
+    }
+  }]);
+
+  return Swipe;
+}();
+
+
+
+/***/ }),
+
 /***/ "./src/js/main.js":
 /*!************************!*\
   !*** ./src/js/main.js ***!
@@ -18455,12 +18558,13 @@ function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
 /* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _framework_render__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./framework/render */ "./src/js/framework/render.js");
-/* harmony import */ var _framework_selector__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./framework/selector */ "./src/js/framework/selector.js");
-/* harmony import */ var _framework_watcher__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./framework/watcher */ "./src/js/framework/watcher.js");
-/* harmony import */ var _framework_components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./framework/components */ "./src/js/framework/components.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _helpers_swiper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./helpers/swiper */ "./src/js/helpers/swiper.js");
+/* harmony import */ var _framework_render__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./framework/render */ "./src/js/framework/render.js");
+/* harmony import */ var _framework_selector__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./framework/selector */ "./src/js/framework/selector.js");
+/* harmony import */ var _framework_watcher__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./framework/watcher */ "./src/js/framework/watcher.js");
+/* harmony import */ var _framework_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./framework/components */ "./src/js/framework/components.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_6__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -18480,6 +18584,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 // 3rd party dependencies
+ // Helpers
+
  // UI dependencies
 
 
@@ -18502,11 +18608,11 @@ function (_components) {
     _this = _possibleConstructorReturn(this, _getPrototypeOf(ui).call(this)); // Variables and classes
 
     _this.props = props;
-    _this.render = _framework_render__WEBPACK_IMPORTED_MODULE_1__["default"];
-    _this.selector = _framework_selector__WEBPACK_IMPORTED_MODULE_2__["default"];
-    _this.watch = _framework_watcher__WEBPACK_IMPORTED_MODULE_3__["default"]; // Third party libs
+    _this.render = _framework_render__WEBPACK_IMPORTED_MODULE_2__["default"];
+    _this.selector = _framework_selector__WEBPACK_IMPORTED_MODULE_3__["default"];
+    _this.watch = _framework_watcher__WEBPACK_IMPORTED_MODULE_4__["default"]; // Third party libs
 
-    _this.request = axios__WEBPACK_IMPORTED_MODULE_5___default.a;
+    _this.request = axios__WEBPACK_IMPORTED_MODULE_6___default.a;
     _this.alert = sweetalert2__WEBPACK_IMPORTED_MODULE_0___default.a; // Listeners and renderers
 
     _this.renderHTML();
@@ -18555,10 +18661,15 @@ function (_components) {
         return _this3.watch.method.call(_this3, el);
       });
     }
+  }], [{
+    key: "swiper",
+    value: function swiper(el) {
+      return new _helpers_swiper__WEBPACK_IMPORTED_MODULE_1__["default"](el);
+    }
   }]);
 
   return ui;
-}(_framework_components__WEBPACK_IMPORTED_MODULE_4__["default"]);
+}(_framework_components__WEBPACK_IMPORTED_MODULE_5__["default"]);
 
 window.ui = ui;
 

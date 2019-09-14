@@ -117,8 +117,8 @@
         }
 
         .active {
-            border-left: 2px solid purple;
-            border-right: 2px solid purple;
+            border-left: 4px solid purple;
+            border-right: 4px solid purple;
             border-bottom: 0px;
         }
         .nav-links {
@@ -129,8 +129,8 @@
                     text-align: center;
                     &:hover {
 
-                        border-left: 2px solid purple;
-                        border-right: 2px solid purple;
+                        border-left: 3px solid purple;
+                        border-right: 3px solid purple;
                         border-bottom: 0px;
                     }
                 }
