@@ -4,26 +4,26 @@ import navbar from './../components/navbar'
 
 export default class Components {
     constructor(){
-        this.initSwiper()
-        this.initSidenav()
-        this.initNav()
+        this.swiper = this.initSwipers()
+        this.side_navs = this.initSidenavs()
+        this.navs = this.initNavs()
     }
 
-    initSwiper(){
+    initSwipers(){
         var sliders = document.getElementsByClassName('slider')
         
-        let a = [...sliders].forEach(slider => {
+        return [...sliders].forEach(slider => {
             new swiper(slider)
         })
     }
 
-    initSidenav(){
+    initSidenavs(){
         let sidebars = document.getElementsByClassName('nav-aside')
-        sidebars = [...sidebars].forEach(sidebar => new sidenav(sidebar))
+        return [...sidebars].forEach(sidebar => new sidenav(sidebar))
     }
 
-    initNav(){
+    initNavs(){
         let navs = document.getElementsByClassName('nav')
-        navs = [...navs].forEach(nav => new navbar(nav))
+        return [...navs].forEach(nav => new navbar(nav))
     }
 }

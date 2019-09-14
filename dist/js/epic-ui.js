@@ -17898,6 +17898,7 @@ module.exports = function(originalModule) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Navbar; });
 /* harmony import */ var gsap_all__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! gsap/all */ "./node_modules/gsap/all.js");
+/* harmony import */ var _main__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../main */ "./src/js/main.js");
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -17906,47 +17907,59 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 
 
+
 var Navbar =
 /*#__PURE__*/
 function () {
   function Navbar(el) {
+    var _this = this;
+
     _classCallCheck(this, Navbar);
 
     this.navbar = el;
     this.watchNavigation(el);
+
+    if (el.getAttribute('primary') !== null) {
+      _main__WEBPACK_IMPORTED_MODULE_1__["default"].swiper('body').onLeft(function (e) {
+        return _this.toggle.call(_this);
+      }).run();
+    }
   }
 
   _createClass(Navbar, [{
     key: "watchNavigation",
     value: function watchNavigation() {
-      var _this = this;
+      var _this2 = this;
 
       var toggler = this.navbar.querySelectorAll('[toggler]')[0];
       if (!toggler) return;
       toggler.addEventListener('click', function (e) {
-        return function () {
-          var links_wrapper = this.navbar.getElementsByClassName('nav-links');
-
-          if (links_wrapper) {
-            // links_wrapper[0].classList.toggle('toggled')
-            if (links_wrapper[0].style.display == 'none' || !links_wrapper[0].style.display) {
-              gsap_all__WEBPACK_IMPORTED_MODULE_0__["TweenLite"].fromTo(links_wrapper, 0.1, {
-                x: 400
-              }, {
-                x: 0,
-                display: 'flex'
-              });
-            } else {
-              gsap_all__WEBPACK_IMPORTED_MODULE_0__["TweenLite"].fromTo(links_wrapper, 0.1, {
-                x: 0
-              }, {
-                x: -400,
-                display: 'none'
-              });
-            }
-          }
-        }.apply(_this, e);
+        return _this2.toggle.apply(_this2, e);
       });
+    }
+  }, {
+    key: "toggle",
+    value: function toggle() {
+      var links_wrapper = this.navbar.getElementsByClassName('nav-links');
+
+      if (links_wrapper) {
+        // links_wrapper[0].classList.toggle('toggled')
+        if (links_wrapper[0].style.display == 'none' || !links_wrapper[0].style.display) {
+          gsap_all__WEBPACK_IMPORTED_MODULE_0__["TweenLite"].fromTo(links_wrapper, 0.1, {
+            x: 400
+          }, {
+            x: 0,
+            display: 'flex'
+          });
+        } else {
+          gsap_all__WEBPACK_IMPORTED_MODULE_0__["TweenLite"].fromTo(links_wrapper, 0.1, {
+            x: 0
+          }, {
+            x: -400,
+            display: 'none'
+          });
+        }
+      }
     }
   }]);
 
@@ -18217,33 +18230,32 @@ function () {
   function Components() {
     _classCallCheck(this, Components);
 
-    this.initSwiper();
-    this.initSidenav();
-    this.initNav();
+    this.swiper = this.initSwipers();
+    this.side_navs = this.initSidenavs();
+    this.navs = this.initNavs();
   }
 
   _createClass(Components, [{
-    key: "initSwiper",
-    value: function initSwiper() {
+    key: "initSwipers",
+    value: function initSwipers() {
       var sliders = document.getElementsByClassName('slider');
-
-      var a = _toConsumableArray(sliders).forEach(function (slider) {
+      return _toConsumableArray(sliders).forEach(function (slider) {
         new _components_swiper__WEBPACK_IMPORTED_MODULE_0__["default"](slider);
       });
     }
   }, {
-    key: "initSidenav",
-    value: function initSidenav() {
+    key: "initSidenavs",
+    value: function initSidenavs() {
       var sidebars = document.getElementsByClassName('nav-aside');
-      sidebars = _toConsumableArray(sidebars).forEach(function (sidebar) {
+      return _toConsumableArray(sidebars).forEach(function (sidebar) {
         return new _components_sidebar__WEBPACK_IMPORTED_MODULE_1__["default"](sidebar);
       });
     }
   }, {
-    key: "initNav",
-    value: function initNav() {
+    key: "initNavs",
+    value: function initNavs() {
       var navs = document.getElementsByClassName('nav');
-      navs = _toConsumableArray(navs).forEach(function (nav) {
+      return _toConsumableArray(navs).forEach(function (nav) {
         return new _components_navbar__WEBPACK_IMPORTED_MODULE_2__["default"](nav);
       });
     }
@@ -18535,7 +18547,7 @@ function () {
     key: "run",
     value: function run() {
       this.element.addEventListener('touchmove', function (evt) {
-        this.handleTouchMove(evt).bind(this);
+        this.handleTouchMove.call(this, evt);
       }.bind(this), false);
     }
   }]);
@@ -18551,11 +18563,12 @@ function () {
 /*!************************!*\
   !*** ./src/js/main.js ***!
   \************************/
-/*! no exports provided */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ui; });
 /* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! sweetalert2 */ "./node_modules/sweetalert2/dist/sweetalert2.all.js");
 /* harmony import */ var sweetalert2__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(sweetalert2__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _helpers_swiper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./helpers/swiper */ "./src/js/helpers/swiper.js");
@@ -18670,6 +18683,7 @@ function (_components) {
 
   return ui;
 }(_framework_components__WEBPACK_IMPORTED_MODULE_5__["default"]);
+
 
 window.ui = ui;
 

@@ -12,7 +12,7 @@ import components from './framework/components'
 
 // Third party libs
 import axios from 'axios'
-class ui extends components {
+export default class ui extends components {
     constructor(props){
         super();
 

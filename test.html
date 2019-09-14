@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="initial-scale=1,width=device-width">
     <link rel="stylesheet" type="text/css" href="dist/css/epic-ui.css">
     <script src="dist/js/epic-ui.js"></script>
     <title>Epic UI test</title>
@@ -14,7 +15,7 @@
     </style>
 </head>
 <body>
-    <nav class="nav" id="primary-nav">
+    <nav class="nav" primary>
         <div class="home">
             <img src="https://image.flaticon.com/icons/png/512/70/70370.png">
         </div>
@@ -112,10 +113,7 @@
 <script>
     window.app = new ui({
         created(){
-            ui.swiper('#primary-nav').onLeft(function(e){
-                console.log('asd')
-            })
-            this.request.get('https://jsonplaceholder.typicode.com/todos/1')
+            
         },
         data: {
             text: 'asd'
