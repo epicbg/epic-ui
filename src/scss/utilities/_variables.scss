@@ -48,9 +48,10 @@ $card-border-radius: 2px;
 
 
 // Grid / Button sizes
+
 $sizes: 'xs', 'sm', 'md', 'lg', 'xl';
 $breakpoints: 480, 720, 1240, 1440, 1800;
-$sizes-with-breakpoints: ('xs': 480, 'sm': 720, 'md': 1240, 'lg': 1440, 'xl': 1800);
+$sizes-with-breakpoints: ('xs': 1em, 'sm': 48em, 'md': 64em, 'lg': 75em);
 
 $grid-columns-length: 12;
 
@@ -83,6 +84,13 @@ $helper-types: (
     'mx': 'margin'
 );
 
+// class name: position
+$text-helper-classes: (
+    'text-center': center,
+    'text-left': left,
+    'text-right': right
+);
+
 $image-sizes: (
     'size-64': 64px,
     'size-48': 48px,
@@ -91,4 +99,4 @@ $image-sizes: (
     'size-16': 16px,
     'size-8': 8px,
 
-)
+);

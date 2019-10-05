@@ -18010,7 +18010,6 @@ function () {
       var dropdowns = this.navbar.getElementsByClassName('link-dropdown');
       dropdowns = _toConsumableArray(dropdowns).forEach(function (dropdown_links) {
         dropdown_links.addEventListener('click', function (e) {
-          e.preventDefault();
           e.target.classList.toggle('active');
           var dropdown = e.target.parentNode.getElementsByClassName('dropdown');
 
@@ -18714,4 +18713,4 @@ module.exports = __webpack_require__(/*! C:\projects\css-framework\src\scss\main
 /***/ })
 
 /******/ });
-//# sourceMappingURL=epic-ui.js.map
+//# sourceMappingURL=framework.js.map

@@ -1,0 +1,33 @@
+{% extends 'layouts/default.twig' %}
+
+{% block body %}
+  <section class="container primary text-center" id="intro">
+   
+        <h1 style="margin-top: 200px">EPIC UI</h1>
+        <div class="mt-3">
+          Mobile first, flexbox based frontend framework
+          
+        </div>
+        <div class="mt-1">
+          EPIC UI is the first framework which includes everything you need to create a simple web application.<br> It includes axios, sweetalert, GSAP html inline animations (GIA package).
+        </div>
+        <div class="mt-1">
+          Framework also comes with its own pre built js functionalitites which we found are commonly used by developers when bootstrapping a project
+        </div>
+        
+        <div class="mt-3">
+          <a class="button o-primary is-md">DOWNLOAD</a>
+          <a class="button o-primary is-md" href="/docs">DOCS</a>
+          <a class="button o-primary is-md">TEMPLATES</a>
+          <a class="button o-primary is-md">ANIMATIONS</a>
+        </div>
+        <div class="mt-2">
+            <pre id="install-npm" class="intro-npm"><code>npm install epic-ui</code><code id="npmCopy" class="intro-npm-copy" data-clipboard-text="npm install bulma">copy</code></pre>
+        </div>
+        <div class="mt-8 external-links">
+            <a href="https://github.com/epicbg/epic-ui">GITHUB</a>
+            <a href="https://epic-uiworkspace.slack.com/">SLACK</a>
+            <a href="http://epicweb.bg">EPICWEB</a>
+        </div>
+  </section>
+{% endblock %}

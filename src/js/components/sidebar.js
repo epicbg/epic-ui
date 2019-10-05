@@ -8,7 +8,6 @@ export default class Sidebar {
         let dropdowns = this.navbar.getElementsByClassName('link-dropdown')
         dropdowns = [...dropdowns].forEach(dropdown_links => {
             dropdown_links.addEventListener('click', (e) => {
-                e.preventDefault();
                 e.target.classList.toggle('active')
                 let dropdown = e.target.parentNode.getElementsByClassName('dropdown')
                 if(dropdown[0]){

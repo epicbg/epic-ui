@@ -64,7 +64,7 @@
     flex-direction: column;
     @include default-shadow();
     background-color: $bg-color;
-    min-width: 250px;
+    min-width: 300px;
     a {
         display: block;
         padding: 15px 20px;
@@ -102,7 +102,7 @@
 }
 
 
-@media only screen and (max-width: #{map-get($sizes-with-breakpoints, 'md')}px){
+@media only screen and (max-width: #{map-get($sizes-with-breakpoints, 'md')}){
     .nav {
         position:fixed;
         bottom: 0px;

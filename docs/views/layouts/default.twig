@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <meta name="viewport" content="initial-scale=1,width=device-width">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href='/stylesheets/framework.css'>
+    <script src="/javascripts/framework.js"></script>
+  </head>
+  <body>
+      <!-- <nav class="nav" primary>
+          <div class="home">
+              <img src="https://image.flaticon.com/icons/png/512/70/70370.png">
+          </div>
+          <div class="logo">
+              <img  src="/images/eui-logo.JPG">
+          </div>
+          <div class="nav-links">
+              <div class="nav-left">
+                  <a href="/">Home</a>
+                  <a href="/docs">Documentation</a>
+                  <a href="/examples">Examples</a>
+                  <a href="/premades">Premade layouts</a>
+                  <a href="http://gia.epicweb.bg">Animations</a>
+              </div>
+              <div class="nav-right">
+                <a href="https://github.com/epicbg/epic-ui">Github</a>
+                <a href="https://epic-uiworkspace.slack.com/">Slack</a>
+                <a href="http://epicweb.bg">EPICWEB</a>
+              </div>
+          </div>
+          <div class="burger" toggler>
+              <div></div>
+              <div></div>
+              <div></div>
+          </div>
+      </nav> -->
+    {% block body %}{% endblock %}
+  </body>
+  <script>
+      window.app = new ui()
+  </script>
+</html>

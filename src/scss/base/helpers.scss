@@ -21,6 +21,14 @@
 }
 
 
+.flat {
+    box-shadow: none !important;
+    border: none !important;
+    &:hover {
+        background-color: transparent;
+    }
+}
+
 // Margin and padding helpers (configured in variables)
 
 @each $prefix, $prop in $helper-types {
@@ -38,6 +46,16 @@
     }
 }
 
+// TEXT HELPERS
+// ALIGN LEFT / RIGHT / CENTER
+@each $class, $position in $text-helper-classes {
+    .#{$class}{
+        text-align: $position;
+    }
+}
+
+// SIZE HELPERS
+
 .full-width {
     width: 100%;
     margin: 0 0 !important;
@@ -47,11 +65,3 @@
     height: 100%;
 }
 
-
-.flat {
-    box-shadow: none !important;
-    border: none !important;
-    &:hover {
-        background-color: transparent;
-    }
-}

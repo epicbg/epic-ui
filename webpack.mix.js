@@ -6,11 +6,14 @@ mix.webpackConfig({
 }).sourceMaps()
 
 // Docs / Builder components js
-mix.js('builder/js/builder.js', 'builder/index.js')
+// mix.js('builder/js/builder.js', 'builder/index.js')
 
 // Compiles whole framework
-mix.js('src/js/main.js', 'dist/js/epic-ui.js')
-mix.sass('src/scss/main.scss', 'dist/css/epic-ui.css')
+// mix.js('src/js/main.js', 'dist/js/epic-ui.js')
+// mix.sass('src/scss/main.scss', 'dist/css/epic-ui.css')
+
+mix.js('src/js/main.js', 'docs/public/javascripts/framework.js')
+mix.sass('src/scss/main.scss', 'docs/public/stylesheets/framework.css')
 
 
 // Framework sections

@@ -3,7 +3,7 @@
     // current iteration
     $sizes-index: index($sizes-with-breakpoints, $col-size $breakpoint);
     
-    @media only screen and (min-width: #{$breakpoint}px) {
+    @media only screen and (min-width: #{$breakpoint}) {
 
         // Grid 
 
