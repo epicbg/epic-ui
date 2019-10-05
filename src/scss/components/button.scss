@@ -1,11 +1,14 @@
 
 .button {
-    border: none;
     border-radius: 1px;
     @include default-shadow();
     font-family: Montserrat;
     padding: 10px 30px;
     cursor: pointer;
+}
+.icon-button{
+    display: flex;
+    align-items: center;
 }
 
 @for $i from 0 to length($sizes) {
