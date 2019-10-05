@@ -65,3 +65,22 @@
     height: 100%;
 }
 
+
+.flat {
+    box-shadow: none !important;
+    border: none !important;
+    &:hover {
+        background-color: transparent;
+    }
+}
+
+// Text formating
+.text-left{
+    text-align: left;
+}
+.text-center{
+    text-align: center;
+}
+.text-right{
+    text-align: right;
+}

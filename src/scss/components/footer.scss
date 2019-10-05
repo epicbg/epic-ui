@@ -1,0 +1,46 @@
+.footer{
+    h4{
+        font-size: 15px;
+        text-transform: uppercase;
+    }
+    ul{
+        padding: 0;
+        text-align: left;
+        list-style: none;  
+        li{
+            line-height: 28px;
+            font-size: 14px;
+            padding-bottom: 3px;
+        }
+    }
+    .logo-box{
+        border-left-color: inherit;
+        border-left-width: 1px;
+        border-left-style: solid;
+        border-right-color: inherit;
+        border-right-width: 1px;
+        border-right-style: solid;
+    }
+    .copyright{
+        border-top-color: inherit;
+        border-top-width: 1px;
+        border-top-style: solid;
+        .icon{
+            min-width: 45px;
+            height: 45px;
+            font-size: 18px;
+            line-height: 46px;
+            border-radius: 50%;
+            margin-right: 10px;
+            text-align: center;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            margin-bottom: 7px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: inherit;
+            border-radius: px;
+        }
+    }
+}

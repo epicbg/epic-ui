@@ -1,24 +1,24 @@
-@each $col-size, $breakpoint in $sizes-with-breakpoints {
+// @each $col-size, $breakpoint in $sizes-with-breakpoints {
     
-    // current iteration
-    $sizes-index: index($sizes-with-breakpoints, $col-size $breakpoint);
+//     // current iteration
+//     $sizes-index: index($sizes-with-breakpoints, $col-size $breakpoint);
     
-    @media only screen and (min-width: #{$breakpoint}) {
+//     @media only screen and (min-width: #{$breakpoint}px) {
 
-        // Grid 
+//         // Grid 
 
-        @for $i from 1 through $grid-columns-length {
-            .#{$col-size}-#{$i} {
-                flex-basis: (100 / ($grid-columns-length / $i) ) * 1%;
-            }
+//         @for $i from 1 through $grid-columns-length {
+//             .#{$col-size}-#{$i} {
+//                 flex-basis: (100 / ($grid-columns-length / $i) ) * 1%;
+//             }
             
-            .offset-md-#{$i} {
-                margin-left: (100 / ($grid-columns-length / $i) ) * 1%;
-            }
-        }
+//             .offset-#{$col-size}-#{$i} {
+//                 margin-left: (100 / ($grid-columns-length / $i) ) * 1%;
+//             }
+//         }
 
 
-        // Todo implement grid helpers
+//         // Todo implement grid helpers
         
-    }
-}
+//     }
+// }

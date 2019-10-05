@@ -1,6 +1,7 @@
 input:not([type="radio"]):not([type="checkbox"]), select{
     padding: 5px 10px;
     font-size: 20px;
+    box-sizing: border-box;
 }
 
 

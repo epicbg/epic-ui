@@ -221,8 +221,8 @@ var components = {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\projects\css-framework\builder\js\builder.js */"./builder/js/builder.js");
-module.exports = __webpack_require__(/*! C:\projects\css-framework\src\scss\main.scss */"./src/scss/main.scss");
+__webpack_require__(/*! D:\projects\epic-ui\builder\js\builder.js */"./builder/js/builder.js");
+module.exports = __webpack_require__(/*! D:\projects\epic-ui\src\scss\main.scss */"./src/scss/main.scss");
 
 
 /***/ })

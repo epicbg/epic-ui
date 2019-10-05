@@ -2,7 +2,18 @@
     width: 500px;
     border-radius: $card-border-radius;
     @include default-shadow();
-
+    .header{
+        display: flex;
+        padding: 10px;
+        .description{
+            padding-top: 5px;
+            padding-left: 10px;
+            width: 80%;
+        }
+        .options{
+            font-size: 1.7em;
+        }
+    }
     .media img {
         width: 100%;
         height: auto;
