@@ -1,10 +1,11 @@
 @charset "utf-8";
 
+@import '/node_modules/flexboxgrid/dist/flexboxgrid.min.css';
+
 @import './utilities/all';
 
 @import './base/all';
 @import './components/all';
 @import './form/all';
 @import './layout/all';
-@import './grid/all';
 @import './libs/swal'
