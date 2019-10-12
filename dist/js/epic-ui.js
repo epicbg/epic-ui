@@ -18010,7 +18010,6 @@ function () {
       var dropdowns = this.navbar.getElementsByClassName('link-dropdown');
       dropdowns = _toConsumableArray(dropdowns).forEach(function (dropdown_links) {
         dropdown_links.addEventListener('click', function (e) {
-          e.preventDefault();
           e.target.classList.toggle('active');
           var dropdown = e.target.parentNode.getElementsByClassName('dropdown');
 
@@ -18707,7 +18706,8 @@ window.ui = ui;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\projects\epic-ui\src\js\main.js */"./src/js/main.js");
+__webpack_require__(/*! D:\projects\epic-ui\src\js\main.js */"./src/js/main.js");
+module.exports = __webpack_require__(/*! D:\projects\epic-ui\src\scss\main.scss */"./src/scss/main.scss");
 
 
 /***/ })
