@@ -9,7 +9,7 @@ read more here https://github.com/epicbg/epic-ui/blob/master/CONTRIBUTING.md
 
 # Thanks to all contributors
 ### Developers
-<div style="display: flex">
+<div class="contributors">
     <div>
         <img height="80px" src="https://avatars0.githubusercontent.com/u/10548750?s=400&v=4">
         <br>
@@ -27,10 +27,16 @@ read more here https://github.com/epicbg/epic-ui/blob/master/CONTRIBUTING.md
     </div>
 </div>
 ### Designers
-<div style="display: flex">
+<div class="contributors">
     <div>
         <img width="80px" src="https://scontent.fsof4-1.fna.fbcdn.net/v/t1.0-9/31720482_1857265067658528_2258802968314773504_n.jpg?_nc_cat=110&_nc_oc=AQlDpR-n6tq7UqpX2boIroE73ir2iSlwxB2fBL1d82JuyX5Z4yAzIDIvBT3_ppLdp0s&_nc_ht=scontent.fsof4-1.fna&oh=becd3ed9d484d326840d7c4a265545b5&oe=5E64A05A">
         <br>
         <a href="https://web.facebook.com/IvoM.Zhelev">Ivo Zhelev</a>
     </div>
 </div>
+
+<style>
+.contributors {
+    display:flex;
+}
+</style>
