@@ -1157,6 +1157,76 @@ h6 {
   text-transform: uppercase;
 }
 
+.jumbotron {
+  padding: 0;
+}
+
+.jumbotron img {
+  width: 100%;
+}
+
+.modal {
+  padding: 30px;
+  box-shadow: 0px 0px 4px -3px rgba(0, 0, 0, 0.58);
+  width: 500px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal .header .title {
+  font-size: 28px;
+}
+
+.modal .body {
+  padding: 15px 0;
+  max-height: 500px;
+  overflow-y: scroll;
+}
+
+.modal .actions {
+  margin-top: 20px;
+}
+
+@media only screen and (max-width: 560px) {
+  .modal {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+  }
+
+  .modal .header .title {
+    padding-bottom: 10px;
+  }
+
+  .modal .body {
+    max-height: 80%;
+    margin-right: -15px;
+  }
+
+  .modal .body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+  }
+
+  .modal .body::-webkit-scrollbar {
+    width: 6px;
+    background-color: #F5F5F5;
+  }
+
+  .modal .body::-webkit-scrollbar-thumb {
+    background-color: #000000;
+  }
+
+  .modal .actions {
+    position: absolute;
+    right: 30px;
+    bottom: 10px;
+  }
+}
+
 input:not([type="radio"]):not([type="checkbox"]),
 select {
   padding: 5px 10px;
