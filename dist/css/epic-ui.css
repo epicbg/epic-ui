@@ -1048,8 +1048,9 @@ h6 {
 }
 
 .alert {
-  padding: 20px;
-  border-radius: 2px;
+  padding: 14px;
+  border-radius: 3px;
+  border-left: 8px solid rgba(0, 0, 0, 0.4);
 }
 
 .badge {
