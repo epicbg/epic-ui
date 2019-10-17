@@ -1,0 +1,22 @@
+    
+    .tabs{
+        margin: 0 auto -1px auto;
+        padding: 0;
+        list-style: none;
+        .tab{
+            padding: 10px 30px;
+            display: inline-block;
+        }
+        .active{
+            border-top: 3px solid orangered;
+            border-left-width: 1px;
+            border-left-style: solid;
+            border-right-width: 1px;
+            border-right-style: solid;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            margin-bottom: -1px;
+            background-color: #fff;
+            color: black;
+        }
+    }
