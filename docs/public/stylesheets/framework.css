@@ -1158,6 +1158,21 @@ h6 {
   text-transform: uppercase;
 }
 
+span:hover {
+  position: relative;
+}
+
+span[aria-label]:hover:after {
+  content: attr(aria-label);
+  padding: 4px 8px;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  white-space: nowrap;
+  z-index: 20px;
+  background: red;
+}
+
 input:not([type="radio"]):not([type="checkbox"]),
 select {
   padding: 5px 10px;

@@ -1,7 +1,7 @@
 {
-  "name": "css-framework",
+  "name": "epic-ui",
   "version": "1.0.0",
-  "description": "",
+  "description": "Front end framework for the modern web.",
   "main": "src/js/main.js",
   "scripts": {
     "ui:compile": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
@@ -9,12 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://epikweb@bitbucket.org/epikteam/css-framework.git"
+    "url": "git+https://github.com/epicbg/epic-ui.git"
   },
   "keywords": [],
-  "author": "zhoraygevorgyan",
+  "author": "epicbg",
   "license": "MIT",
-  "homepage": "https://bitbucket.org/epikteam/css-framework#readme",
+  "homepage": "https://github.com/epicbg/epic-ui#readme",
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
