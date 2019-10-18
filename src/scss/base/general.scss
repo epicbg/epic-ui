@@ -31,6 +31,5 @@ a {
     h#{$i}{
         @include montserrat();
         font-size: #{$default-font-size * 3 - substracted-percentage($default-font-size * 3, $i * 10)}px;
-        margin: 0; 
     }
 }

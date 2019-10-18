@@ -18706,8 +18706,8 @@ window.ui = ui;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\projects\css-framework\src\js\main.js */"./src/js/main.js");
-module.exports = __webpack_require__(/*! C:\projects\css-framework\src\scss\main.scss */"./src/scss/main.scss");
+__webpack_require__(/*! C:\projects\epic-ui\src\js\main.js */"./src/js/main.js");
+module.exports = __webpack_require__(/*! C:\projects\epic-ui\src\scss\main.scss */"./src/scss/main.scss");
 
 
 /***/ })
