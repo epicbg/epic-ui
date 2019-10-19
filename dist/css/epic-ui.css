@@ -1330,28 +1330,17 @@ select {
   display: flex;
   flex-direction: column;
   box-shadow: 0px 0px 4px -3px rgba(0, 0, 0, 0.58);
-  background-color: #ffffff;
   min-width: 300px;
 }
 
 .nav-aside a {
   display: block;
-  padding: 15px 20px;
-  border-bottom: 1px solid #ecf0f1;
-}
-
-.nav-aside a:hover {
-  border-bottom: 1px solid purple;
-}
-
-.nav-aside .active {
-  border-bottom: 1px solid purple;
-  color: purple;
+  padding: 14px 27px;
 }
 
 .nav-aside .link-dropdown .dropdown {
   display: none;
-  margin-left: 25px;
+  margin-left: 44px;
   padding-bottom: 20px;
 }
 
@@ -1435,40 +1424,6 @@ select {
   .nav .burger {
     padding: 10px;
     display: block;
-  }
-
-  .nav-aside {
-    flex-direction: row;
-    float: inherit;
-    width: 100%;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-
-  .nav-aside::-webkit-scrollbar {
-    display: none;
-  }
-
-  .nav-aside::-moz-scrollbar {
-    display: none;
-  }
-
-  .nav-aside a {
-    padding: 15px 40px;
-  }
-
-  .nav-aside .link-dropdown .dropdown {
-    box-shadow: 0px 0px 4px -3px rgba(0, 0, 0, 0.58);
-    position: absolute;
-    background: white;
-    margin-left: 0px;
-    padding-bottom: 0px;
-  }
-
-  .nav-aside .link-dropdown .dropdown a {
-    margin: 0px;
-    padding-left: inherit;
-    padding: 15px 40px;
   }
 }
 
