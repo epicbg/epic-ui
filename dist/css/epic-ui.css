@@ -67,14 +67,14 @@ h6 {
 
 .primary {
   color: #ffffff;
-  background-color: #7f18d4;
-  border: 1px solid #7f18d4;
+  background-color: #17004a;
+  border: 1px solid #17004a;
 }
 
 .o-primary {
   background-color: white;
-  color: #7f18d4;
-  border: 1px solid #7f18d4;
+  color: #17004a;
+  border: 1px solid #17004a;
 }
 
 .secondary {
@@ -744,7 +744,7 @@ h6 {
 }
 
 .button.primary:hover {
-  background-color: #7115bd;
+  background-color: #0f0031;
 }
 
 .button.secondary:hover {
@@ -840,12 +840,12 @@ h6 {
 }
 
 .progress-primary {
-  background-color: #dfc0f8 !important;
+  background-color: #5f17ff !important;
 }
 
 .progress-primary .fixed-bar,
 .progress-primary .loading-bar {
-  background-color: #7f18d4 !important;
+  background-color: #17004a !important;
 }
 
 .progress-secondary {
