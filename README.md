@@ -4,9 +4,9 @@
 
 # Coming soon
 
-The framework launch date is 5th december. Until then you can help us out with coding it.
-You can track the deadline here http://ui.epicweb.bg/. Help us by contributing
-read more here https://github.com/epicbg/epic-ui/blob/master/CONTRIBUTING.md
+The framework launch date is 5th december. Until then you can help us out with coding it.<br>
+You can track the deadline here http://ui.epicweb.bg/. Help us by contributing <br>
+read more here https://github.com/epicbg/epic-ui/blob/master/CONTRIBUTING.md <br>
 
 # Thanks to all contributors
 
@@ -32,14 +32,18 @@ read more here https://github.com/epicbg/epic-ui/blob/master/CONTRIBUTING.md
     </tr>
 </table>
 
-### Designers
 
 <table>
     <tr>
-    <td>
-        <img width="80px" src="https://scontent.fsof4-1.fna.fbcdn.net/v/t1.0-9/31720482_1857265067658528_2258802968314773504_n.jpg?_nc_cat=110&_nc_oc=AQlDpR-n6tq7UqpX2boIroE73ir2iSlwxB2fBL1d82JuyX5Z4yAzIDIvBT3_ppLdp0s&_nc_ht=scontent.fsof4-1.fna&oh=becd3ed9d484d326840d7c4a265545b5&oe=5E64A05A">
-        <br>
-        <a href="https://web.facebook.com/IvoM.Zhelev">Ivo Zhelev</a>
-    </td>
+        <td>
+            <img width="80px" height="70px" src="https://scontent.fsof4-1.fna.fbcdn.net/v/t1.0-9/31720482_1857265067658528_2258802968314773504_n.jpg?_nc_cat=110&_nc_oc=AQlDpR-n6tq7UqpX2boIroE73ir2iSlwxB2fBL1d82JuyX5Z4yAzIDIvBT3_ppLdp0s&_nc_ht=scontent.fsof4-1.fna&oh=becd3ed9d484d326840d7c4a265545b5&oe=5E64A05A">
+            <br>
+            <a href="https://web.facebook.com/IvoM.Zhelev">Ivo Zhelev</a>
+        </td>
+        <td>
+            <img width="80px" height="70px" src="https://scontent.fsof3-1.fna.fbcdn.net/v/t1.0-9/72174600_144442380123801_6128151263117836288_n.jpg?_nc_cat=109&_nc_oc=AQn-bm77HrZecTUGh-1Z4CRzi4Y0MxjDyzTIbvEIz_lfB1AKVOMWb0AoSgTIYp8l8S0&_nc_ht=scontent.fsof3-1.fna&oh=698d55e4f29f08061b1bcd26bff0b142&oe=5E215305">
+            <br>
+            <a href="https://www.facebook.com/nedko.boyanov">NedBoyanov</a>
+        </td>
     </tr>
 </table>
