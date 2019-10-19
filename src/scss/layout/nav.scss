@@ -63,39 +63,20 @@
     display: flex;
     flex-direction: column;
     @include default-shadow();
-    background-color: $bg-color;
     min-width: 300px;
     a {
         display: block;
-        padding: 15px 20px;
-        border-bottom: 1px solid #ecf0f1;
-        &:hover {
-            border-bottom: 1px solid purple;
-        }
+        padding: 14px 27px;
     }
 
-    .active {
-        border-bottom: 1px solid purple;
-        color: purple;
-    }
 
     .link-dropdown {
-        a {
-            // &:after {
-            //     content: 'v';
-            //     float:right;
-            // }
-        }
         .dropdown {
             display: none;
-            margin-left: 25px;
+            margin-left: 44px;
             padding-bottom: 20px;
             a {
                 padding-left: 5px;
-                // &:after {
-                //     content: '';
-                //     float:right;
-                // }
             }
         }
     }
@@ -169,35 +150,4 @@
         }
     }
 
-    .nav-aside {
-        flex-direction: row;
-        float: inherit;
-        width:100%;
-        -ms-overflow-style: none;  // IE 10+
-        scrollbar-width: none;  // Firefox
-        &::-webkit-scrollbar { 
-            display: none;
-        }
-        &::-moz-scrollbar { 
-            display: none;
-        }
-        // visible in menu link
-        a {
-            padding: 15px 40px;
-        }
-        .link-dropdown {
-            .dropdown {
-                @include default-shadow();
-                position: absolute;
-                background: white;
-                margin-left: 0px;
-                padding-bottom: 0px;
-                a {
-                    margin: 0px;
-                    padding-left: inherit;
-                    padding: 15px 40px;
-                }
-            }
-        }
-    }
 }
