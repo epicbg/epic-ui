@@ -1,6 +1,6 @@
 {
   "name": "epic-ui",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Front end framework for the modern web.",
   "main": "src/js/main.js",
   "scripts": {
