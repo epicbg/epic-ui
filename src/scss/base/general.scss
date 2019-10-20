@@ -18,18 +18,10 @@ a {
     }
 }
 
-* {
-    -webkit-transition: all 0.1s ease;
-    -moz-transition:    all 0.1s ease;
-    -ms-transition:     all 0.1s ease;
-    -o-transition:      all 0.1s ease;
-  }
-
 
 
 @for $i from 1 through 6 {
     h#{$i}{
-        @include montserrat();
-        font-size: #{$default-font-size * 3 - substracted-percentage($default-font-size * 3, $i * 10)}px;
+        @include roboto();
     }
 }

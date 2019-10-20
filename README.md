@@ -1,14 +1,13 @@
-<div align="center">
-        <img src="docs/public/images/epicui-logo.png" height="" style="border-radius: 10px;margin-top:13px">
-</div>
 
 # Coming soon
 
-The framework launch date is 5th december. Until then you can help us out with coding it.<br>
-You can track the deadline here http://ui.epicweb.bg/. Help us by contributing <br>
+The framework launch beta on 5th december. Until then you can help us out with coding it.<br>
+You can track our progress here http://ui.epicweb.bg/. Help us by contributing <br>
 read more here https://github.com/epicbg/epic-ui/blob/master/CONTRIBUTING.md <br>
 
 # Thanks to all contributors
+
+Become part of the slack team. Join slack by sending your email to zhoraygevorgyan@epicweb.bg and I will send you invite.
 
 ### Developers
 

@@ -1,7 +1,7 @@
 # Contributing to EPIC-UI
 
 Thank to everyone who wants to help build this awesome framework. This file will introduce you to the project guidelines.
-If you have questions or you dont understand something join the team's slack https://epic-uiworkspace.slack.com/ .
+If you have questions or you dont understand something, join the team's slack by sending your email to zhoraygevorgyan@epicweb.bg and you will get invite.
 There is always someone online to guide you if you don't understand something or have more questions.
 
 ## Understanding what is EPIC-UI framework
@@ -23,7 +23,7 @@ the fully finished css framework must have:
 - Class helpers like: text-center, text-md-center, pt-1 (padding-top: 10), pl-1, mt-1 etc..
 - Premade snippets for shopping carts, multiple footer variations, multiple header variations, jumbotron variations and more..
 - Premade layouts with multiple versions for every type of website: portfolios, web stores, admin panels and more
-- GIA (gsap-inline-animations library) finished. Checkout about GIA here https://github.com/epicbg/gsap-inline-animations
+- Momentum (epic-momentum library) finished. Checkout about `momentum` here https://github.com/epicbg/epic-momentum
 
 # Getting started
 
@@ -44,7 +44,7 @@ All the components are in `src/scss/components`. To add a component create new f
 Project has folder called `examples` in root directory. This folder is used for show case of a component which will be added later in the documentation. For example today you feel like creating footer designs, for which we have `src/scss/components/footer.scss` file, write your code there in new root class (for example .footer1) and then you can write the html in `examples/footers.html` to test it. We expect working demos, don't be worried about your code quality/structure, we or maybe another collaborator are inspect everything line by line and fixing it to match our expectations.
 
 ## Issues we need help for
-Don't push yourself for these issues if you want to do them. Maybe you've come to create something which doesnt exist in the framework, thats awesome! But if you have experience with issues below you can lend us a hand.
+If you don't think you have enough experience for these tasks leave them for someone else. Maybe you can create something that doesn't exist in the framework, thats awesome! But if you have experience with issues below you can lend us a hand.
 
 #### Switch from laravel-mix to gulp
 https://github.com/epicbg/epic-ui/issues/10
