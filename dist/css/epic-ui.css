@@ -1049,14 +1049,16 @@ h6 {
 
 .badge {
   display: inline-block;
-  font-size: 75%;
-  font-weight: 700;
-  line-height: 1;
+  padding: 0;
+  width: 26px;
+  height: 26px;
+  line-height: 26px;
+  font-size: 14px;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
-  border-radius: 100%;
-  padding: 2px 5px;
+  border-radius: 50px;
+  position: relative;
 }
 
 .cart-1 {
@@ -1244,6 +1246,21 @@ h6 {
   margin-bottom: -1px;
   background-color: #fff;
   color: black;
+}
+
+.side-sheet {
+  position: fixed;
+  height: 100%;
+  width: 350px;
+  background-color: antiquewhite;
+}
+
+.side-sheet-left {
+  left: 0;
+}
+
+.side-sheet-right {
+  right: 0;
 }
 
 input:not([type="radio"]):not([type="checkbox"]),

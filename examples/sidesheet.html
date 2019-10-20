@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="initial-scale=1,width=device-width">
+    <link rel="stylesheet" type="text/css" href="../dist/css/epic-ui.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="dist/js/epic-ui.js"></script>
+    <title>Epic UI test - Side Sheet</title>
+    <style>
+        .box {
+            padding: 10px;
+            margin-left: 10px;
+            background: blue;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+
+        <div class="side-sheet side-sheet-right">
+
+            <div class="cart-1 pl-2 pt-2 pr-2">
+                <div class="products">
+                    <div class="product pt-1">
+                        <div class="image">
+                            <img class="size-64" src="https://pawfriends.qodeinteractive.com/wp-content/uploads/2019/07/shop-img-2-305x340.jpg" alt="">
+                        </div>
+                        <div class="description">
+                            <div class="title">Nasranite gashti na jorkata</div>
+                            <div class="text pt-1">Quantity: 2x$20</div>
+                        </div>
+                        <div class="price pt-1 pl-1">
+                            $40
+                        </div>
+                    </div>
+                    <div class="product pt-1">
+                        <div class="image">
+                            <img class="size-64" src="https://pawfriends.qodeinteractive.com/wp-content/uploads/2019/07/shop-img-2-305x340.jpg" alt="">
+                        </div>
+                        <div class="description">
+                            <div class="title">Nasranite gashti na jorkata</div>
+                            <div class="text pt-1">Quantity: 2x$20</div>
+                        </div>
+                        <div class="price pt-1 pl-1">
+                            $40
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="actions pt-1 text-center">
+                    <button class="button is-sm primary">View cart</button>
+                    <button class="button is-sm dark">Checkout</button>
+                </div>
+                <div class="subtotal pt-1 text-center">
+                    Subtotal: $80
+                </div>
+            </div>
+
+        </div>
+
+
+    </main>
+
+
+
+
+</body>
+<script>
+    window.app = new ui({
+        created() {
+
+        },
+        data: {
+            text: 'asd'
+        }
+    })
+</script>
+
+</html>

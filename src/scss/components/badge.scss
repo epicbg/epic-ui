@@ -1,13 +1,22 @@
 .badge {
+    // display: inline-block;
+    // font-size: 75%;
+    // font-weight: 700;
+    // line-height: 1;
+    // text-align: center;
+    // white-space: nowrap;
+    // vertical-align: baseline;
+    // border-radius:100%;
+    // padding: 2px 5px;
     display: inline-block;
-    font-size: 75%;
-    font-weight: 700;
-    line-height: 1;
+    padding: 0;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    font-size: 14px;
     text-align: center;
     white-space: nowrap;
     vertical-align: baseline;
-    border-radius:100%;
-    padding: 2px 5px;
+    border-radius: 50px;
+    position: relative;
 }
-
-                            

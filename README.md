@@ -11,7 +11,6 @@ read more here https://github.com/epicbg/epic-ui/blob/master/CONTRIBUTING.md <br
 # Thanks to all contributors
 
 ### Developers
-
 <table>
     <tr>
     <td>
