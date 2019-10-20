@@ -1,3 +1,11 @@
+# EPIC-UI
+
+![HitCount](http://hits.dwyl.io/epicbg/epic-ui/master.svg)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/epicbg/epic-ui/issues)
+![Npm version](https://img.shields.io/npm/v/epic-ui.svg)
+[![Npm downloads](https://img.shields.io/npm/dm/epic-ui)](http://nodejs.org/download/)
+[![Size](https://img.shields.io/bundlephobia/min/epic-ui)](http://nodejs.org/download/)
+[![Known Vulnerabilities](https://snyk.io//test/github/epicbg/epic-ui/badge.svg?targetFile=package.json)](https://snyk.io//test/github/epicbg/epic-ui?targetFile=package.json)
 
 # Coming soon
 
