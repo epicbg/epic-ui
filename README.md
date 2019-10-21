@@ -1,14 +1,21 @@
-<div align="center">
-        <img src="docs/public/images/epicui-logo.png" height="" style="border-radius: 10px;margin-top:13px">
-</div>
+# EPIC-UI
+
+![HitCount](http://hits.dwyl.io/epicbg/epic-ui/master.svg)
+[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/epicbg/epic-ui/issues)
+![Npm version](https://img.shields.io/npm/v/epic-ui.svg)
+[![Npm downloads](https://img.shields.io/npm/dm/epic-ui)](http://nodejs.org/download/)
+[![Size](https://img.shields.io/bundlephobia/min/epic-ui)](http://nodejs.org/download/)
+[![Known Vulnerabilities](https://snyk.io//test/github/epicbg/epic-ui/badge.svg?targetFile=package.json)](https://snyk.io//test/github/epicbg/epic-ui?targetFile=package.json)
 
 # Coming soon
 
-The framework launch date is 5th december. Until then you can help us out with coding it.<br>
-You can track the deadline here http://ui.epicweb.bg/. Help us by contributing <br>
+The framework launch beta on 5th december. Until then you can help us out with coding it.<br>
+You can track our progress here http://ui.epicweb.bg/. Help us by contributing <br>
 read more here https://github.com/epicbg/epic-ui/blob/master/CONTRIBUTING.md <br>
 
 # Thanks to all contributors
+
+Become part of the slack team. Join slack by sending your email to zhoraygevorgyan@epicweb.bg and I will send you invite.
 
 ### Developers
 <table>

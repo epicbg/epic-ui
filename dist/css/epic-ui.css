@@ -27,42 +27,29 @@ a:hover {
   color: #080b0e;
 }
 
-* {
-  -webkit-transition: all 0.1s ease;
-  -moz-transition: all 0.1s ease;
-  -ms-transition: all 0.1s ease;
-  -o-transition: all 0.1s ease;
-}
-
 h1 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 37.8px;
+  font-family: 'Roboto', sans-serif;
 }
 
 h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 33.6px;
+  font-family: 'Roboto', sans-serif;
 }
 
 h3 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 29.4px;
+  font-family: 'Roboto', sans-serif;
 }
 
 h4,
 .card .headline {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 25.2px;
+  font-family: 'Roboto', sans-serif;
 }
 
 h5 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 21px;
+  font-family: 'Roboto', sans-serif;
 }
 
 h6 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 16.8px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .primary {
@@ -151,15 +138,27 @@ h6 {
 
 .light {
   color: #ffffff;
-  background-color: #ffffff;
-  border: 1px solid #ffffff;
+  background-color: #efefef;
+  border: 1px solid #efefef;
   color: #2c3e50;
 }
 
 .o-light {
   background-color: white;
+  color: #efefef;
+  border: 1px solid #efefef;
+}
+
+.white {
   color: #ffffff;
-  border: 1px solid #ffffff;
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+.o-white {
+  background-color: white;
+  color: #fff;
+  border: 1px solid #fff;
 }
 
 .dark {
@@ -772,6 +771,10 @@ h6 {
 }
 
 .button.light:hover {
+  background-color: #e2e2e2;
+}
+
+.button.white:hover {
   background-color: #f2f2f2;
 }
 
@@ -908,7 +911,16 @@ h6 {
 
 .progress-light .fixed-bar,
 .progress-light .loading-bar {
-  background-color: #ffffff !important;
+  background-color: #efefef !important;
+}
+
+.progress-white {
+  background-color: white !important;
+}
+
+.progress-white .fixed-bar,
+.progress-white .loading-bar {
+  background-color: #fff !important;
 }
 
 .progress-dark {
@@ -1049,16 +1061,16 @@ h6 {
 
 .badge {
   display: inline-block;
-  padding: 0;
-  width: 26px;
-  height: 26px;
-  line-height: 26px;
-  font-size: 14px;
+  font-size: .75em;
+  font-weight: 700;
+  line-height: 1;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
-  border-radius: 50px;
-  position: relative;
+  border-radius: 50%;
+  padding: 5px;
+  width: 1em;
+  height: 1em;
 }
 
 .cart-1 {
@@ -1351,8 +1363,18 @@ select {
 }
 
 .nav-aside a {
+  cursor: pointer;
+  color: inherit;
   display: block;
   padding: 14px 27px;
+}
+
+.nav-aside a:hover {
+  font-weight: bold;
+}
+
+.nav-aside .active {
+  font-weight: bold;
 }
 
 .nav-aside .link-dropdown .dropdown {

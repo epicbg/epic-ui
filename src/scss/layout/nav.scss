@@ -65,8 +65,17 @@
     @include default-shadow();
     min-width: 300px;
     a {
+        cursor: pointer;
+        color: inherit;
         display: block;
         padding: 14px 27px;
+        &:hover {
+            font-weight: bold;
+        }
+    }
+
+    .active {
+        font-weight: bold;
     }
 
 
