@@ -15,6 +15,7 @@
   "author": "epicbg",
   "license": "MIT",
   "homepage": "https://github.com/epicbg/epic-ui#readme",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
