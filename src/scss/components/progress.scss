@@ -23,18 +23,27 @@
   // Progress Bar
   .progress {
     position: relative;
-    height: 4px;
+    height: 6px;
     display: block;
     width: 100%;
     border-radius: 2px;
     background-clip: padding-box;
     overflow: hidden;
+    // border-style: solid;
+    border-width: thin;
     .fixed-bar {
       position: absolute;
-      background-color: inherit;
       top: 0;
       bottom: 0;
       transition: width .3s linear;
+    }
+    .fixed-bar > .progress {
+        box-sizing: border-box;
+        border-style: solid;
+    }
+    .loading-bar > .progress {
+        box-sizing: content-box;
+        
     }
     .loading-bar {
       &:before {
