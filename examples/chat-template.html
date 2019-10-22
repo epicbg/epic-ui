@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="initial-scale=1,width=device-width">
+    <link rel="stylesheet" type="text/css" href="../dist/css/epic-ui.css">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="dist/js/epic-ui.js"></script>
+    <title>Epic UI test - Side Sheet</title>
+    <style>
+        .box {
+            padding: 10px;
+            margin-left: 10px;
+            background: blue;
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+
+        <div class="chat">
+                <div class="chat-header primary">
+            
+                        <div class="row">
+                            <div class="col-xs-4 text-left">
+                                <i class="fa fa-arrow-left"></i>
+                            </div>
+                            <div class="col-xs-4 text-center">
+                                <h3>Ivan Ivanov <br> <span class="status">online</span></h3>
+                            </div>
+                            <div class="col-xs-4 text-right">
+                                <i class="fa fa-phone pr-1"></i>
+                                <i class="fa fa-video-camera"></i>
+                            </div>
+                        </div>
+            
+                 </div>
+
+                    <div class="chat-msg">    
+                        <div class="msg-box">
+                            <div class="msg-profil-img">
+
+                            </div>
+                            <div class="messages">
+                                    <div class="msg-content">
+                                            Hi Tom, <br> Your new shoes are waiting you in the shopping cart.
+                                            <span class="msg-time">9:44</span>
+                                    </div>
+                                    <div class="msg-content">
+                                           <img src="https://images-na.ssl-images-amazon.com/images/I/91bQYhS1yQL._UX500_.jpg" alt="">
+                                           <span class="msg-time">9:44</span>
+                                    </div>
+                                    <div class="msg-content">
+                                            Finish your order now and get 5% discount! <br> <button class="button is-sm primary msg-btn mt-1">BUY NOW</button>
+                                            <span class="msg-time">9:44</span>
+                                    </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="inserting">
+                        <textarea placeholder="Type a message..."></textarea>
+                        <div class="options pl-2 pb-2">
+                                <i class="fa fa-smile-o"></i>
+                                <i class="fa fa-picture-o"></i>
+                                <i class="fa fa-camera"></i>
+                                <i class="fa fa-at"></i>
+                                <i class="fa fa-shopping-bag"></i>
+                                <i class="fa fa-ellipsis-h"></i>
+                                <span class="mic-btn primary">
+                                    <i class="fa fa-microphone"></i>
+                                </span>
+                        </div>
+                    </div>
+
+        </div>
+
+
+
+
+    </main>
+
+
+
+
+</body>
+<script>
+    window.app = new ui({
+        created() {
+
+        },
+        data: {
+            text: 'asd'
+        }
+    })
+</script>
+
+</html>

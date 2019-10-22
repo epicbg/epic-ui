@@ -39,8 +39,7 @@ h3 {
   font-family: 'Roboto', sans-serif;
 }
 
-h4,
-.card .headline {
+h4 {
   font-family: 'Roboto', sans-serif;
 }
 
@@ -685,6 +684,10 @@ h6 {
   width: 80%;
 }
 
+.card .header .description .title {
+  font-weight: bold;
+}
+
 .card .header .options {
   font-size: 1.7em;
 }
@@ -698,6 +701,7 @@ h6 {
 
 .card .headline {
   padding: 10px;
+  font-size: 24px;
 }
 
 .card .text {
@@ -1103,9 +1107,7 @@ h6 {
   display: inline-block;
 }
 
-.footer h4,
-.footer .card .headline,
-.card .footer .headline {
+.footer h4 {
   font-size: 15px;
   text-transform: uppercase;
 }
@@ -1273,6 +1275,105 @@ h6 {
 
 .side-sheet-right {
   right: 0;
+}
+
+.chat-header {
+  padding: 30px 15px 10px 15px;
+}
+
+.chat-header h3 {
+  margin: 0;
+}
+
+.chat-header h3 .status {
+  font-size: 14px;
+  font-weight: 100;
+}
+
+.chat-header i {
+  font-size: 27px;
+}
+
+.chat-msg {
+  padding: 20px;
+  background-color: whitesmoke;
+  height: 1000px;
+}
+
+.chat-msg .msg-box {
+  display: flex;
+  align-items: flex-end;
+}
+
+.chat-msg .msg-box .msg-profil-img {
+  flex-shrink: 0;
+  margin-right: 15px;
+  margin-bottom: 22px;
+  width: 36px;
+  height: 36px;
+  border-radius: 20px;
+  background-color: red;
+}
+
+.chat-msg .msg-box .msg-content {
+  position: relative;
+  margin: 20px 0;
+  padding: 18px 20px 28px 20px;
+  border-radius: 20px;
+  background-color: #fff;
+  font-size: 14px;
+}
+
+.chat-msg .msg-box .msg-content .msg-time {
+  position: absolute;
+  right: 15px;
+  bottom: 4px;
+  color: #9c9c9c;
+  font-size: 12px;
+}
+
+.chat-msg .msg-box .msg-content img {
+  width: 100%;
+}
+
+.chat-msg .msg-box .msg-content .msg-btn {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.inserting {
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.inserting textarea {
+  padding: 20px;
+  width: 100%;
+  border: none;
+}
+
+.inserting .options {
+  position: relative;
+}
+
+.inserting .options i {
+  padding-right: 14px;
+  font-size: 19px;
+}
+
+.inserting .options .mic-btn {
+  position: absolute;
+  right: 20px;
+  bottom: 30px;
+  border-radius: 50%;
+  padding: 12px 14px 10px 14px;
+}
+
+.inserting .options .mic-btn i {
+  padding: 0;
+  font-size: 23px;
 }
 
 input:not([type="radio"]):not([type="checkbox"]),
