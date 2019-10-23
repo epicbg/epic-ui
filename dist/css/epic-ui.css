@@ -1253,10 +1253,6 @@ h6 {
 .tabs.nested::-webkit-scrollbar {
   width: 0px;
   height: 0px;
-  /* remove scrollbar space /
-            background: transparent; / optional: just make scrollbar invisible /
-            }
-            / optional: show position indicator in red */
 }
 
 .tabs::-webkit-scrollbar-thumb,
