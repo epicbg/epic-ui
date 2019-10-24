@@ -58,7 +58,7 @@ h6 {
 }
 
 .o-primary {
-  background-color: white;
+  background-color: transparent;
   color: #17004a;
   border: 1px solid #17004a;
 }
@@ -70,7 +70,7 @@ h6 {
 }
 
 .o-secondary {
-  background-color: white;
+  background-color: transparent;
   color: #95a5a6;
   border: 1px solid #95a5a6;
 }
@@ -82,7 +82,7 @@ h6 {
 }
 
 .o-blue {
-  background-color: white;
+  background-color: transparent;
   color: #2980b9;
   border: 1px solid #2980b9;
 }
@@ -94,7 +94,7 @@ h6 {
 }
 
 .o-success {
-  background-color: white;
+  background-color: transparent;
   color: #2ecc71;
   border: 1px solid #2ecc71;
 }
@@ -106,7 +106,7 @@ h6 {
 }
 
 .o-danger {
-  background-color: white;
+  background-color: transparent;
   color: #d62c1a;
   border: 1px solid #d62c1a;
 }
@@ -118,7 +118,7 @@ h6 {
 }
 
 .o-warning {
-  background-color: white;
+  background-color: transparent;
   color: #f39c12;
   border: 1px solid #f39c12;
 }
@@ -130,7 +130,7 @@ h6 {
 }
 
 .o-info {
-  background-color: white;
+  background-color: transparent;
   color: #3498db;
   border: 1px solid #3498db;
 }
@@ -143,7 +143,7 @@ h6 {
 }
 
 .o-light {
-  background-color: white;
+  background-color: transparent;
   color: #efefef;
   border: 1px solid #efefef;
 }
@@ -155,7 +155,7 @@ h6 {
 }
 
 .o-white {
-  background-color: white;
+  background-color: transparent;
   color: #fff;
   border: 1px solid #fff;
 }
@@ -167,7 +167,7 @@ h6 {
 }
 
 .o-dark {
-  background-color: white;
+  background-color: transparent;
   color: #2c3e50;
   border: 1px solid #2c3e50;
 }
@@ -181,7 +181,7 @@ h6 {
 }
 
 .o-flat {
-  background-color: white;
+  background-color: transparent;
   color: #ffffff;
   border: 1px solid #ffffff;
 }
@@ -1255,18 +1255,203 @@ h6 {
   }
 }
 
-.tabs {
+.tabs,
+.tabs.default,
+.tabs.nested {
   margin: 0 auto -1px auto;
   padding: 0;
   list-style: none;
+  white-space: nowrap;
+  overflow-y: scroll;
+}
+
+.tabs::-webkit-scrollbar,
+.tabs.default::-webkit-scrollbar,
+.tabs.nested::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+.tabs::-webkit-scrollbar-thumb,
+.tabs.default::-webkit-scrollbar-thumb,
+.tabs.nested::-webkit-scrollbar-thumb {
+  background: transparent;
 }
 
 .tabs .tab {
   padding: 10px 30px;
   display: inline-block;
+  cursor: pointer;
 }
 
-.tabs .active {
+.default.primary.tabs {
+  background-color: transparent;
+}
+
+.default.primary.tabs .active {
+  border-bottom-color: #17004a;
+  color: #17004a;
+}
+
+.default.primary.tabs .tab:hover {
+  border-bottom-color: #17004a;
+  color: #17004a;
+}
+
+.default.secondary.tabs {
+  background-color: transparent;
+}
+
+.default.secondary.tabs .active {
+  border-bottom-color: #95a5a6;
+  color: #95a5a6;
+}
+
+.default.secondary.tabs .tab:hover {
+  border-bottom-color: #95a5a6;
+  color: #95a5a6;
+}
+
+.default.blue.tabs {
+  background-color: transparent;
+}
+
+.default.blue.tabs .active {
+  border-bottom-color: #2980b9;
+  color: #2980b9;
+}
+
+.default.blue.tabs .tab:hover {
+  border-bottom-color: #2980b9;
+  color: #2980b9;
+}
+
+.default.success.tabs {
+  background-color: transparent;
+}
+
+.default.success.tabs .active {
+  border-bottom-color: #2ecc71;
+  color: #2ecc71;
+}
+
+.default.success.tabs .tab:hover {
+  border-bottom-color: #2ecc71;
+  color: #2ecc71;
+}
+
+.default.danger.tabs {
+  background-color: transparent;
+}
+
+.default.danger.tabs .active {
+  border-bottom-color: #d62c1a;
+  color: #d62c1a;
+}
+
+.default.danger.tabs .tab:hover {
+  border-bottom-color: #d62c1a;
+  color: #d62c1a;
+}
+
+.default.warning.tabs {
+  background-color: transparent;
+}
+
+.default.warning.tabs .active {
+  border-bottom-color: #f39c12;
+  color: #f39c12;
+}
+
+.default.warning.tabs .tab:hover {
+  border-bottom-color: #f39c12;
+  color: #f39c12;
+}
+
+.default.info.tabs {
+  background-color: transparent;
+}
+
+.default.info.tabs .active {
+  border-bottom-color: #3498db;
+  color: #3498db;
+}
+
+.default.info.tabs .tab:hover {
+  border-bottom-color: #3498db;
+  color: #3498db;
+}
+
+.default.light.tabs {
+  background-color: transparent;
+}
+
+.default.light.tabs .active {
+  border-bottom-color: #efefef;
+  color: #efefef;
+}
+
+.default.light.tabs .tab:hover {
+  border-bottom-color: #efefef;
+  color: #efefef;
+}
+
+.default.white.tabs {
+  background-color: transparent;
+}
+
+.default.white.tabs .active {
+  border-bottom-color: #fff;
+  color: #fff;
+}
+
+.default.white.tabs .tab:hover {
+  border-bottom-color: #fff;
+  color: #fff;
+}
+
+.default.dark.tabs {
+  background-color: transparent;
+}
+
+.default.dark.tabs .active {
+  border-bottom-color: #2c3e50;
+  color: #2c3e50;
+}
+
+.default.dark.tabs .tab:hover {
+  border-bottom-color: #2c3e50;
+  color: #2c3e50;
+}
+
+.default.flat.tabs {
+  background-color: transparent;
+}
+
+.default.flat.tabs .active {
+  border-bottom-color: #ffffff;
+  color: #ffffff;
+}
+
+.default.flat.tabs .tab:hover {
+  border-bottom-color: #ffffff;
+  color: #ffffff;
+}
+
+.default.tabs {
+  border: none;
+  color: #c0bec5;
+  border-bottom: 1px solid #efefef;
+}
+
+.default.tabs .active {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: inherit;
+  color: inherit;
+}
+
+.nested.tabs .active {
   border-top: 3px solid orangered;
   border-left-width: 1px;
   border-left-style: solid;
@@ -1275,8 +1460,6 @@ h6 {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   margin-bottom: -1px;
-  background-color: #fff;
-  border-bottom: 1px solid white;
   color: black;
 }
 

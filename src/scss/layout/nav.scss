@@ -91,6 +91,37 @@
     }
 }
 
+.nav-bottom{
+    position: fixed;
+    bottom: 0;
+    @include default-shadow();
+    width: 100%;
+    padding: 14px 0;
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        li{
+            text-align: center;
+            text-transform: uppercase;
+            display: inline-block;
+            font-size: 11px;
+            color: $text-muted-color;
+            display: flex;
+            flex-direction: column;
+            i{
+                padding-bottom: 5px;
+                font-size: 24px;
+            }
+        }
+        .active{
+            color: $blue-color;
+        }
+    }
+}
+
 
 @media only screen and (max-width: #{map-get($sizes-with-breakpoints, 'md')}){
     .nav {

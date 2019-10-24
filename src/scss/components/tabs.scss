@@ -1,12 +1,54 @@
-    
-    .tabs{
+    .tabs {
         margin: 0 auto -1px auto;
         padding: 0;
         list-style: none;
+        white-space: nowrap;
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+            width: 0px;
+            height: 0px;
+        }
+            &::-webkit-scrollbar-thumb {
+            background: transparent;
+            }
         .tab{
             padding: 10px 30px;
             display: inline-block;
+            cursor: pointer;
         }
+    }
+    @each $name, $color in $theme-colors {
+        .tabs.default.#{$name} {
+            background-color: transparent;
+            .active{
+                border-bottom-color: $color;
+                color: $color;
+            }
+            .tab {
+
+                &:hover {
+                border-bottom-color: $color;
+                color: $color;
+                    
+                }
+            }
+        }
+    }
+    .tabs.default{
+        @extend .tabs;
+        border: none;
+        color: $text-muted-color;
+        border-bottom: 1px solid #efefef;
+        .active{
+            border-bottom-width: 1px;
+            border-bottom-style: solid;
+            border-bottom-color: inherit;
+            color: inherit;
+        }
+    }
+
+    .tabs.nested{
+        @extend .tabs;
         .active{
             border-top: 3px solid orangered;
             border-left-width: 1px;
@@ -16,8 +58,7 @@
             border-top-left-radius: 5px;
             border-top-right-radius: 5px;
             margin-bottom: -1px;
-            background-color: #fff;
-            border-bottom: 1px solid white;
             color: black;
         }
     }
+    
