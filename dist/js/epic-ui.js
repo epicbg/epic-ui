@@ -18817,8 +18817,22 @@ function () {
         var targets = document.querySelectorAll(this.options.target);
         targets = _toConsumableArray(targets).forEach(function (elem) {
           return function (elem, options) {
-            // toggle target element
-            elem.style.display = elem.style.display != 'none' ? 'none' : ''; // todo render options
+            // causes bugs if original state starts with none 
+            if (!elem.getAttribute('original-display-state')) {
+              elem.setAttribute('original-display-state', window.getComputedStyle(elem).display);
+            }
+
+            var original_state = elem.getAttribute('original-display-state'); // toggle target element
+
+            if (original_state == 'none') {
+              elem.style.display = window.getComputedStyle(elem).display != 'none' ? 'none' : 'block';
+            }
+
+            if (original_state != 'none') {
+              console.log(window.getComputedStyle(elem).display, original_state);
+              elem.style.display = window.getComputedStyle(elem).display != 'none' ? 'none' : original_state;
+            } // todo render options
+
 
             var _iteratorNormalCompletion = true;
             var _didIteratorError = false;
@@ -18891,8 +18905,8 @@ function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\projects\epic-ui\src\js\main.js */"./src/js/main.js");
-module.exports = __webpack_require__(/*! C:\projects\epic-ui\src\scss\main.scss */"./src/scss/main.scss");
+__webpack_require__(/*! D:\projects\epic-ui\src\js\main.js */"./src/js/main.js");
+module.exports = __webpack_require__(/*! D:\projects\epic-ui\src\scss\main.scss */"./src/scss/main.scss");
 
 
 /***/ })

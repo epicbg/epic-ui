@@ -10,8 +10,22 @@ export default class Toggler {
             let targets = document.querySelectorAll(this.options.target)
 
             targets = [...targets].forEach(elem => function(elem, options){
+                // causes bugs if original state starts with none 
+
+                if(!elem.getAttribute('original-display-state')){
+                    elem.setAttribute('original-display-state', window.getComputedStyle(elem).display)
+                }
+
+                let original_state = elem.getAttribute('original-display-state')
+                
                 // toggle target element
-                elem.style.display = elem.style.display != 'none' ? 'none' : ''
+                if(original_state == 'none'){
+                    elem.style.display = window.getComputedStyle(elem).display != 'none' ? 'none' : 'block'
+                }
+                if(original_state != 'none'){
+                    console.log(window.getComputedStyle(elem).display, original_state)
+                    elem.style.display = window.getComputedStyle(elem).display != 'none' ? 'none' : original_state
+                }
 
                 // todo render options
                 for (const param of options.params) {

@@ -1193,6 +1193,7 @@ h6 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: none;
 }
 
 .modal .header .close {
@@ -1687,6 +1688,41 @@ select {
 
 .nav-aside .link-dropdown .dropdown a {
   padding-left: 5px;
+}
+
+.nav-bottom {
+  position: fixed;
+  bottom: 0;
+  box-shadow: 0px 0px 4px -3px rgba(0, 0, 0, 0.58);
+  width: 100%;
+  padding: 14px 0;
+}
+
+.nav-bottom ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-bottom ul li {
+  text-align: center;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 11px;
+  color: #c0bec5;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-bottom ul li i {
+  padding-bottom: 5px;
+  font-size: 24px;
+}
+
+.nav-bottom ul .active {
+  color: #2980b9;
 }
 
 @media only screen and (max-width: 64em) {
