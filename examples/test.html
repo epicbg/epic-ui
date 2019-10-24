@@ -26,16 +26,12 @@
         </div>
         <div class="nav-links">
             <div class="nav-left">
-                <a class="active" href="/">asdads</a>
-                <a href="/">asdads</a>
-                <a href="/">asdads</a>
-                <a href="/">asdads</a>
+                <a toggles=".card">Card</a>
+                <a toggles=".footer">Footers</a>
             </div>
             <div class="nav-right">
-                <a href="/">login<span class="badge primary">3</span></a>
-                <a href="/">register</a>
-                <a toggles=".cart-1">cart1</a>
-                <a toggles="#modal1">modal1</a>
+                <a toggles=".cart-1">Cart1</a>
+                <a toggles="#modal1">Modal1</a>
 
 
 
@@ -51,7 +47,7 @@
 
     <div class="modal" id="modal1">
         <div class="header">
-            <div class="close">
+            <div class="close" toggles="#modal1">
                 <i class="fa fa-close"></i>
             </div>
             <div class="title">
@@ -66,7 +62,7 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta porro unde ?
         </div>
         <div class="actions text-right">
-            <button class="button is-md danger">Don't allow</button>
+            <button class="button is-md danger" toggles="#modal1">Don't allow</button>
             <button class="button is-md success">Allow</button>
         </div>
     </div>
@@ -121,7 +117,7 @@
         <div class="container">
             <div class="row">
 
-                <div class="card col xs12 sm6 mt-3 ml-5">
+                <div class="card col xs12 sm6 mt-3 ml-5" style="display: none">
                     <div class="header">
                             <div class="image">
                                 <img class="avatar size-48" src="https://pbs.twimg.com/profile_images/1145812709960667136/YF4VoP3e_400x400.jpg" alt="">
@@ -167,7 +163,7 @@
 
 
 
-        <div class="footer flat">
+        <div class="footer flat" style="display: none">
             <div class="pt-5 pb-5">
                 <div class="col-md-10 col-md-offset-1">
                     <div class="row">

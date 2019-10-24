@@ -1194,6 +1194,7 @@ h6 {
   left: 50%;
   transform: translate(-50%, -50%);
   display: none;
+  background: #ffffff;
 }
 
 .modal .header .close {
