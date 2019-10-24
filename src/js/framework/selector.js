@@ -5,6 +5,10 @@ class Selector {
         //     return el.parentNode.getAttribute('v-for') !== null || el.parentNode.parentNode.getAttribute('v-for') === null 
         // })
     }
+
+    find(selector){
+        return document.querySelectorAll(selector)
+    }
 }
 
 export default new Selector

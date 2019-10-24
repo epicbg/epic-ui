@@ -17887,6 +17887,36 @@ module.exports = function(originalModule) {
 
 /***/ }),
 
+/***/ "./src/js/components/all.js":
+/*!**********************************!*\
+  !*** ./src/js/components/all.js ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../components/swiper */ "./src/js/components/swiper.js");
+/* harmony import */ var _components_sidebar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../components/sidebar */ "./src/js/components/sidebar.js");
+/* harmony import */ var _components_navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../components/navbar */ "./src/js/components/navbar.js");
+
+
+ // html class: javascript class 
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  "swiper": function swiper(el) {
+    return new _components_swiper__WEBPACK_IMPORTED_MODULE_0__["default"](el);
+  },
+  "nav-aside": function navAside(el) {
+    return new _components_sidebar__WEBPACK_IMPORTED_MODULE_1__["default"](el);
+  },
+  "nav": function nav(el) {
+    return new _components_navbar__WEBPACK_IMPORTED_MODULE_2__["default"](el);
+  }
+});
+
+/***/ }),
+
 /***/ "./src/js/components/navbar.js":
 /*!*************************************!*\
   !*** ./src/js/components/navbar.js ***!
@@ -18192,19 +18222,18 @@ function () {
 
 /***/ }),
 
-/***/ "./src/js/framework/components.js":
-/*!****************************************!*\
-  !*** ./src/js/framework/components.js ***!
-  \****************************************/
+/***/ "./src/js/framework/framework.js":
+/*!***************************************!*\
+  !*** ./src/js/framework/framework.js ***!
+  \***************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Components; });
-/* harmony import */ var _components_swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../components/swiper */ "./src/js/components/swiper.js");
-/* harmony import */ var _components_sidebar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../components/sidebar */ "./src/js/components/sidebar.js");
-/* harmony import */ var _components_navbar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../components/navbar */ "./src/js/components/navbar.js");
+/* harmony import */ var _components_all__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../components/all */ "./src/js/components/all.js");
+/* harmony import */ var _utilities_all__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../utilities/all */ "./src/js/utilities/all.js");
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
 
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
@@ -18222,41 +18251,72 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 
 
-
 var Components =
 /*#__PURE__*/
 function () {
   function Components() {
     _classCallCheck(this, Components);
 
-    this.swiper = this.initSwipers();
-    this.side_navs = this.initSidenavs();
-    this.navs = this.initNavs();
+    this.sections = [{
+      elements: _components_all__WEBPACK_IMPORTED_MODULE_0__["default"],
+      search: function search(i) {
+        return document.getElementsByClassName(i);
+      }
+    }, {
+      elements: _utilities_all__WEBPACK_IMPORTED_MODULE_1__["default"],
+      search: function search(i) {
+        return document.querySelectorAll("[".concat(i, "]"));
+      }
+    }];
+    this.run();
   }
 
   _createClass(Components, [{
-    key: "initSwipers",
-    value: function initSwipers() {
-      var sliders = document.getElementsByClassName('slider');
-      return _toConsumableArray(sliders).forEach(function (slider) {
-        new _components_swiper__WEBPACK_IMPORTED_MODULE_0__["default"](slider);
-      });
-    }
-  }, {
-    key: "initSidenavs",
-    value: function initSidenavs() {
-      var sidebars = document.getElementsByClassName('nav-aside');
-      return _toConsumableArray(sidebars).forEach(function (sidebar) {
-        return new _components_sidebar__WEBPACK_IMPORTED_MODULE_1__["default"](sidebar);
-      });
-    }
-  }, {
-    key: "initNavs",
-    value: function initNavs() {
-      var navs = document.getElementsByClassName('nav');
-      return _toConsumableArray(navs).forEach(function (nav) {
-        return new _components_navbar__WEBPACK_IMPORTED_MODULE_2__["default"](nav);
-      });
+    key: "run",
+    value: function run() {
+      var _this = this;
+
+      var _iteratorNormalCompletion = true;
+      var _didIteratorError = false;
+      var _iteratorError = undefined;
+
+      try {
+        var _loop = function _loop() {
+          var section = _step.value;
+
+          var _loop2 = function _loop2(component) {
+            // Find html elements
+            results = section.search(component); // Map results to component's class
+
+            results = _toConsumableArray(results).forEach(function (result) {
+              section.elements[component].call(_this, result);
+            });
+          };
+
+          for (var component in section.elements) {
+            _loop2(component);
+          }
+        };
+
+        for (var _iterator = this.sections[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+          var results;
+
+          _loop();
+        }
+      } catch (err) {
+        _didIteratorError = true;
+        _iteratorError = err;
+      } finally {
+        try {
+          if (!_iteratorNormalCompletion && _iterator["return"] != null) {
+            _iterator["return"]();
+          }
+        } finally {
+          if (_didIteratorError) {
+            throw _iteratorError;
+          }
+        }
+      }
     }
   }]);
 
@@ -18390,6 +18450,11 @@ function () {
       return document.querySelectorAll("[".concat(directive, "]")); // .filter(el => {
       //     return el.parentNode.getAttribute('v-for') !== null || el.parentNode.parentNode.getAttribute('v-for') === null 
       // })
+    }
+  }, {
+    key: "find",
+    value: function find(selector) {
+      return document.querySelectorAll(selector);
     }
   }]);
 
@@ -18574,7 +18639,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _framework_render__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./framework/render */ "./src/js/framework/render.js");
 /* harmony import */ var _framework_selector__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./framework/selector */ "./src/js/framework/selector.js");
 /* harmony import */ var _framework_watcher__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./framework/watcher */ "./src/js/framework/watcher.js");
-/* harmony import */ var _framework_components__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./framework/components */ "./src/js/framework/components.js");
+/* harmony import */ var _framework_framework__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./framework/framework */ "./src/js/framework/framework.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_6__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
@@ -18609,8 +18674,8 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 var ui =
 /*#__PURE__*/
-function (_components) {
-  _inherits(ui, _components);
+function (_framework) {
+  _inherits(ui, _framework);
 
   function ui(props) {
     var _this;
@@ -18633,6 +18698,7 @@ function (_components) {
 
 
     props.created.call(_assertThisInitialized(_this));
+    window.ui = _assertThisInitialized(_this);
     return _this;
   } // Convert directives to rendered html
 
@@ -18681,10 +18747,129 @@ function (_components) {
   }]);
 
   return ui;
-}(_framework_components__WEBPACK_IMPORTED_MODULE_5__["default"]);
+}(_framework_framework__WEBPACK_IMPORTED_MODULE_5__["default"]);
 
 
 window.ui = ui;
+
+/***/ }),
+
+/***/ "./src/js/utilities/all.js":
+/*!*********************************!*\
+  !*** ./src/js/utilities/all.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _utilities_toggler__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../utilities/toggler */ "./src/js/utilities/toggler.js");
+ // html attribute: javascript class 
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  "toggles": function toggles(el) {
+    return new _utilities_toggler__WEBPACK_IMPORTED_MODULE_0__["default"](el);
+  }
+});
+
+/***/ }),
+
+/***/ "./src/js/utilities/toggler.js":
+/*!*************************************!*\
+  !*** ./src/js/utilities/toggler.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Toggler; });
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
+
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var Toggler =
+/*#__PURE__*/
+function () {
+  function Toggler(el) {
+    _classCallCheck(this, Toggler);
+
+    this.el = el;
+    this.listen();
+  }
+
+  _createClass(Toggler, [{
+    key: "listen",
+    value: function listen() {
+      this.el.addEventListener('click', function () {
+        var _this = this;
+
+        var targets = document.querySelectorAll(this.options.target);
+        targets = _toConsumableArray(targets).forEach(function (elem) {
+          return function (elem, options) {
+            // toggle target element
+            elem.style.display = elem.style.display != 'none' ? 'none' : ''; // todo render options
+
+            var _iteratorNormalCompletion = true;
+            var _didIteratorError = false;
+            var _iteratorError = undefined;
+
+            try {
+              for (var _iterator = options.params[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {// example for method  <a toggles=".cart-1 | method:doSomething"></a>
+                // but there is alternative <a toggles=".cart-1" ui-on="click:doSomething"></a>
+                // if(param.includes('method')){
+                //     window.ui.props.methods[param.split(':')[1]].call()
+                // }
+
+                var param = _step.value;
+              }
+            } catch (err) {
+              _didIteratorError = true;
+              _iteratorError = err;
+            } finally {
+              try {
+                if (!_iteratorNormalCompletion && _iterator["return"] != null) {
+                  _iterator["return"]();
+                }
+              } finally {
+                if (_didIteratorError) {
+                  throw _iteratorError;
+                }
+              }
+            }
+          }.call(_this, elem, _this.options);
+        });
+      }.bind(this));
+    }
+  }, {
+    key: "options",
+    get: function get() {
+      var options = this.el.getAttribute('toggles').split(' | '); // targe class/id
+
+      var target = options.splice(0, 1)[0]; // these will be parameters passed to the toggler e.g <button toggles="#nav | reveal | someParam"></button>
+
+      var params = options;
+      return {
+        target: target,
+        params: params
+      };
+    }
+  }]);
+
+  return Toggler;
+}();
+
+
 
 /***/ }),
 

@@ -17,7 +17,7 @@
     </style>
 </head>
 <body>
-    <nav class="nav" primary>
+    <nav class="nav" id="nav" primary>
         <div class="home">
             <img src="https://image.flaticon.com/icons/png/512/70/70370.png">
         </div>
@@ -34,6 +34,9 @@
             <div class="nav-right">
                 <a href="/">login<span class="badge primary">3</span></a>
                 <a href="/">register</a>
+
+
+
             </div>
         </div>
         <div class="burger" toggler>
@@ -202,8 +205,12 @@
 
 
     </main>
+
+    
+<a toggles=".cart-1" ui-on="click:doSomething">cart</a>
     
 </body>
+<script src="../dist/js/epic-ui.js"></script>
 <script>
     window.app = new ui({
         created(){
@@ -211,6 +218,11 @@
         },
         data: {
             text: 'asd'
+        },
+        methods: {
+            doSomething(){
+                
+            }
         }
     })
 </script>

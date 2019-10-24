@@ -8,11 +8,11 @@ import swiper from './helpers/swiper'
 import render from './framework/render'
 import selector from './framework/selector'
 import watcher from './framework/watcher'
-import components from './framework/components'
+import framework from './framework/framework'
 
 // Third party libs
 import axios from 'axios'
-export default class ui extends components {
+export default class ui extends framework {
     constructor(props){
         super();
 
@@ -32,7 +32,8 @@ export default class ui extends components {
         
         // Call ui constructor
         props.created.call(this);
-
+        
+        window.ui = this
     }
 
     // Convert directives to rendered html
@@ -53,6 +54,7 @@ export default class ui extends components {
         // UI event handler
         this.selector.findDirectives('ui-on').forEach(el => this.watch.method.call(this, el))
     }
+
 
     static swiper(el){
         return new swiper(el);
