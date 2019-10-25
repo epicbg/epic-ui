@@ -3,6 +3,7 @@
     border-radius: 1px;
     @include default-shadow();
     font-family: Montserrat;
+    font-size: $default-font-size;
     padding: 10px 30px;
     cursor: pointer;
 }
@@ -14,6 +15,7 @@
 @for $i from 0 to length($sizes) {
     .button.is-#{nth($sizes, $i + 1)}{
         padding: #{$button-vertical-padding  + ($i * $button-vertical-padding)}px #{$button-default-padding + ($i * $button-default-padding)}px;  
+        font-size: #{$button-default-font-size + ($i*2)}px;
     }
 }
 
