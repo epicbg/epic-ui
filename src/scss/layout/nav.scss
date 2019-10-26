@@ -58,6 +58,17 @@
     }
 }
 
+.fixed-aside {
+    margin-left: 302px;
+}
+
+.nav-aside.fixed {
+    top:0;
+    left: 0;
+    position: fixed;
+    height: 100vh;
+}
+
 .nav-aside {
     float: left;
     display: flex;

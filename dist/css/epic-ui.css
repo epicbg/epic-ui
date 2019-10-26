@@ -58,7 +58,7 @@ h6 {
 }
 
 .o-primary {
-  background-color: transparent;
+  background-color: white;
   color: #17004a;
   border: 1px solid #17004a;
 }
@@ -70,7 +70,7 @@ h6 {
 }
 
 .o-secondary {
-  background-color: transparent;
+  background-color: white;
   color: #95a5a6;
   border: 1px solid #95a5a6;
 }
@@ -82,7 +82,7 @@ h6 {
 }
 
 .o-blue {
-  background-color: transparent;
+  background-color: white;
   color: #2980b9;
   border: 1px solid #2980b9;
 }
@@ -94,7 +94,7 @@ h6 {
 }
 
 .o-success {
-  background-color: transparent;
+  background-color: white;
   color: #2ecc71;
   border: 1px solid #2ecc71;
 }
@@ -106,7 +106,7 @@ h6 {
 }
 
 .o-danger {
-  background-color: transparent;
+  background-color: white;
   color: #d62c1a;
   border: 1px solid #d62c1a;
 }
@@ -118,7 +118,7 @@ h6 {
 }
 
 .o-warning {
-  background-color: transparent;
+  background-color: white;
   color: #f39c12;
   border: 1px solid #f39c12;
 }
@@ -130,7 +130,7 @@ h6 {
 }
 
 .o-info {
-  background-color: transparent;
+  background-color: white;
   color: #3498db;
   border: 1px solid #3498db;
 }
@@ -143,7 +143,7 @@ h6 {
 }
 
 .o-light {
-  background-color: transparent;
+  background-color: white;
   color: #efefef;
   border: 1px solid #efefef;
 }
@@ -155,7 +155,7 @@ h6 {
 }
 
 .o-white {
-  background-color: transparent;
+  background-color: white;
   color: #fff;
   border: 1px solid #fff;
 }
@@ -167,7 +167,7 @@ h6 {
 }
 
 .o-dark {
-  background-color: transparent;
+  background-color: white;
   color: #2c3e50;
   border: 1px solid #2c3e50;
 }
@@ -181,7 +181,7 @@ h6 {
 }
 
 .o-flat {
-  background-color: transparent;
+  background-color: white;
   color: #ffffff;
   border: 1px solid #ffffff;
 }
@@ -1656,6 +1656,17 @@ select {
   color: purple;
 }
 
+.fixed-aside {
+  margin-left: 302px;
+}
+
+.nav-aside.fixed {
+  top: 0;
+  left: 0;
+  position: fixed;
+  height: 100vh;
+}
+
 .nav-aside {
   float: left;
   display: flex;
@@ -1687,6 +1698,41 @@ select {
 
 .nav-aside .link-dropdown .dropdown a {
   padding-left: 5px;
+}
+
+.nav-bottom {
+  position: fixed;
+  bottom: 0;
+  box-shadow: 0px 0px 4px -3px rgba(0, 0, 0, 0.58);
+  width: 100%;
+  padding: 14px 0;
+}
+
+.nav-bottom ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-bottom ul li {
+  text-align: center;
+  text-transform: uppercase;
+  display: inline-block;
+  font-size: 11px;
+  color: #c0bec5;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-bottom ul li i {
+  padding-bottom: 5px;
+  font-size: 24px;
+}
+
+.nav-bottom ul .active {
+  color: #2980b9;
 }
 
 @media only screen and (max-width: 64em) {
