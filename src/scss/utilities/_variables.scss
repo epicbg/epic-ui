@@ -41,6 +41,7 @@ $theme-colors: (
 
 
 // Button sizing
+$button-default-font-size: 12px;
 $button-default-padding: 10;
 $button-vertical-padding: $button-default-padding - substracted-percentage($button-default-padding, 60);
 
@@ -60,7 +61,7 @@ $grid-columns-length: 12;
 // Navbar vars
 $nav-size: 65px;
 $nav-font-size: 16px;
-$nav-button-padding-size: (($nav-size - $nav-font-size) / 2) - 4px;
+$nav-button-padding-size: (($nav-size - $nav-font-size) / 2) - 2px;
 
 // for position helpers mt-1 pt-1 etc.. loops to 10
 $helper-loop-length: 10;

@@ -717,6 +717,7 @@ h6 {
   border-radius: 1px;
   box-shadow: 0px 0px 4px -3px rgba(0, 0, 0, 0.58);
   font-family: Montserrat;
+  font-size: 12;
   padding: 10px 30px;
   cursor: pointer;
 }
@@ -728,22 +729,27 @@ h6 {
 
 .button.is-xs {
   padding: 4px 10px;
+  font-size: 12pxpx;
 }
 
 .button.is-sm {
   padding: 8px 20px;
+  font-size: 14pxpx;
 }
 
 .button.is-md {
   padding: 12px 30px;
+  font-size: 16pxpx;
 }
 
 .button.is-lg {
   padding: 16px 40px;
+  font-size: 18pxpx;
 }
 
 .button.is-xl {
   padding: 20px 50px;
+  font-size: 20pxpx;
 }
 
 .button.primary:hover {
@@ -788,6 +794,21 @@ h6 {
 
 .button.flat:hover {
   background-color: #f2f2f2;
+}
+
+.button-cart {
+  position: relative;
+}
+
+.button-cart .cart {
+  padding: 10px;
+  padding-top: 0px;
+  display: none;
+  position: absolute;
+  top: 70px;
+  right: 6px;
+  min-width: 350px;
+  box-shadow: 0px 0px 4px -3px rgba(0, 0, 0, 0.58);
 }
 
 .oval {
@@ -1086,86 +1107,6 @@ h6 {
   height: 1em;
 }
 
-.cart-1 {
-  font-family: 'Roboto', sans-serif;
-  display: inline-block;
-}
-
-.cart-1 .products {
-  display: inline-block;
-}
-
-.cart-1 .products .product {
-  display: flex;
-}
-
-.cart-1 .products .product .image {
-  display: inline-block;
-}
-
-.cart-1 .products .product .description {
-  display: inline-block;
-  padding-left: 10px;
-}
-
-.cart-1 .products .product .description .text {
-  font-size: 14px;
-}
-
-.cart-1 .products .product .price {
-  display: inline-block;
-}
-
-.footer h4 {
-  font-size: 15px;
-  text-transform: uppercase;
-}
-
-.footer ul {
-  padding: 0;
-  text-align: left;
-  list-style: none;
-}
-
-.footer ul li {
-  line-height: 28px;
-  font-size: 14px;
-  padding-bottom: 3px;
-}
-
-.footer .logo-box {
-  border-left-color: inherit;
-  border-left-width: 1px;
-  border-left-style: solid;
-  border-right-color: inherit;
-  border-right-width: 1px;
-  border-right-style: solid;
-}
-
-.footer .copyright {
-  border-top-color: inherit;
-  border-top-width: 1px;
-  border-top-style: solid;
-}
-
-.footer .copyright .icon {
-  min-width: 45px;
-  height: 45px;
-  font-size: 18px;
-  line-height: 46px;
-  border-radius: 50%;
-  margin-right: 10px;
-  text-align: center;
-  display: inline-block;
-  position: relative;
-  z-index: 1;
-  margin-bottom: 7px;
-  border-width: 1px;
-  border-style: solid;
-  border-color: inherit;
-  border-radius: px;
-}
-
 .login-box input {
   margin-top: 10px;
   width: 100%;
@@ -1175,14 +1116,6 @@ h6 {
   margin-top: 10px;
   width: 100%;
   text-transform: uppercase;
-}
-
-.jumbotron {
-  padding: 0;
-}
-
-.jumbotron img {
-  width: 100%;
 }
 
 .modal {
@@ -1478,121 +1411,6 @@ h6 {
   right: 0;
 }
 
-.chat-header {
-  padding: 30px 15px 10px 15px;
-}
-
-.chat-header h3 {
-  margin: 0;
-}
-
-.chat-header h3 .status {
-  font-size: 14px;
-  font-weight: 100;
-}
-
-.chat-header i {
-  font-size: 27px;
-}
-
-.chat-msg {
-  padding: 20px;
-  background-color: whitesmoke;
-  height: 1000px;
-}
-
-.chat-msg .msg-box {
-  display: flex;
-  align-items: flex-end;
-}
-
-.chat-msg .msg-box .msg-profil-img {
-  flex-shrink: 0;
-  margin-right: 15px;
-  margin-bottom: 22px;
-  width: 36px;
-  height: 36px;
-  border-radius: 20px;
-  background-color: red;
-}
-
-.chat-msg .msg-box .msg-content {
-  position: relative;
-  margin: 20px 0;
-  padding: 18px 20px 28px 20px;
-  border-radius: 20px;
-  background-color: #fff;
-  font-size: 14px;
-}
-
-.chat-msg .msg-box .msg-content .msg-time {
-  position: absolute;
-  right: 15px;
-  bottom: 4px;
-  color: #9c9c9c;
-  font-size: 12px;
-}
-
-.chat-msg .msg-box .msg-content img {
-  width: 100%;
-}
-
-.chat-msg .msg-box .msg-content .msg-btn {
-  width: 100%;
-  border-radius: 20px;
-}
-
-.inserting {
-  background-color: #fff;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-}
-
-.inserting textarea {
-  padding: 20px;
-  width: 100%;
-  border: none;
-}
-
-.inserting .options {
-  position: relative;
-}
-
-.inserting .options i {
-  padding-right: 14px;
-  font-size: 19px;
-}
-
-.inserting .options .mic-btn {
-  position: absolute;
-  right: 20px;
-  bottom: 30px;
-  border-radius: 50%;
-  padding: 12px 14px 10px 14px;
-}
-
-.inserting .options .mic-btn i {
-  padding: 0;
-  font-size: 23px;
-}
-
-input:not([type="radio"]):not([type="checkbox"]),
-select {
-  padding: 5px 10px;
-  font-size: 20px;
-  box-sizing: border-box;
-}
-
-select {
-  min-width: 273px;
-  background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") right center no-repeat;
-  background-position: 96%;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-}
-
 .nav {
   width: 100%;
   min-height: 65px;
@@ -1628,7 +1446,7 @@ select {
 
 .nav .nav-right a,
 .nav .nav-left a {
-  padding: 20.5px 15px;
+  padding: 22.5px 15px;
 }
 
 .nav .nav-right a:hover,
@@ -1812,6 +1630,215 @@ select {
     padding: 10px;
     display: block;
   }
+}
+
+input:not([type="radio"]):not([type="checkbox"]),
+select {
+  padding: 5px 10px;
+  font-size: 20px;
+  box-sizing: border-box;
+}
+
+select {
+  min-width: 273px;
+  background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") right center no-repeat;
+  background-position: 96%;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.cart {
+  padding: 0px 10px;
+  font-family: 'Roboto', sans-serif;
+  display: inline-block;
+  background: white;
+}
+
+.cart .products {
+  display: inline-block;
+}
+
+.cart .products .product {
+  display: flex;
+}
+
+.cart .products .product .image {
+  display: inline-block;
+}
+
+.cart .products .product .description {
+  display: inline-block;
+  padding-left: 10px;
+}
+
+.cart .products .product .description .title {
+  font-size: 16px;
+}
+
+.cart .products .product .description .text {
+  font-size: 13px;
+}
+
+.cart .products .product .price {
+  display: inline-block;
+}
+
+.footer h4 {
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+.footer ul {
+  padding: 0;
+  text-align: left;
+  list-style: none;
+}
+
+.footer ul li {
+  line-height: 28px;
+  font-size: 14px;
+  padding-bottom: 3px;
+}
+
+.footer .logo-box {
+  border-left-color: inherit;
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-right-color: inherit;
+  border-right-width: 1px;
+  border-right-style: solid;
+}
+
+.footer .copyright {
+  border-top-color: inherit;
+  border-top-width: 1px;
+  border-top-style: solid;
+}
+
+.footer .copyright .icon {
+  min-width: 45px;
+  height: 45px;
+  font-size: 18px;
+  line-height: 46px;
+  border-radius: 50%;
+  margin-right: 10px;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 7px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: inherit;
+  border-radius: px;
+}
+
+.jumbotron {
+  padding: 0;
+}
+
+.jumbotron img {
+  width: 100%;
+}
+
+.chat-header {
+  padding: 30px 15px 10px 15px;
+}
+
+.chat-header h3 {
+  margin: 0;
+}
+
+.chat-header h3 .status {
+  font-size: 14px;
+  font-weight: 100;
+}
+
+.chat-header i {
+  font-size: 27px;
+}
+
+.chat-msg {
+  padding: 20px;
+  background-color: whitesmoke;
+  height: 1000px;
+}
+
+.chat-msg .msg-box {
+  display: flex;
+  align-items: flex-end;
+}
+
+.chat-msg .msg-box .msg-profil-img {
+  flex-shrink: 0;
+  margin-right: 15px;
+  margin-bottom: 22px;
+  width: 36px;
+  height: 36px;
+  border-radius: 20px;
+  background-color: red;
+}
+
+.chat-msg .msg-box .msg-content {
+  position: relative;
+  margin: 20px 0;
+  padding: 18px 20px 28px 20px;
+  border-radius: 20px;
+  background-color: #fff;
+  font-size: 14px;
+}
+
+.chat-msg .msg-box .msg-content .msg-time {
+  position: absolute;
+  right: 15px;
+  bottom: 4px;
+  color: #9c9c9c;
+  font-size: 12px;
+}
+
+.chat-msg .msg-box .msg-content img {
+  width: 100%;
+}
+
+.chat-msg .msg-box .msg-content .msg-btn {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.inserting {
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+.inserting textarea {
+  padding: 20px;
+  width: 100%;
+  border: none;
+}
+
+.inserting .options {
+  position: relative;
+}
+
+.inserting .options i {
+  padding-right: 14px;
+  font-size: 19px;
+}
+
+.inserting .options .mic-btn {
+  position: absolute;
+  right: 20px;
+  bottom: 30px;
+  border-radius: 50%;
+  padding: 12px 14px 10px 14px;
+}
+
+.inserting .options .mic-btn i {
+  padding: 0;
+  font-size: 23px;
 }
 
 .swal2-popup .swal2-actions {

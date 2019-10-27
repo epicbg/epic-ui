@@ -27,6 +27,20 @@
     }
 }
 
+.button-cart {
+    position: relative;
+    .cart {
+        padding: 10px;
+        padding-top: 0px;
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 6px;
+        min-width: 350px;
+        @include default-shadow();
+    }
+}
+
 .oval {
     border-radius: 70px;
 }
