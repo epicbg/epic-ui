@@ -1,34 +1,61 @@
 // rounding
 .rounded {
-    border-radius: 0.25rem !important;
+    border-radius: $rounding-size !important;
 }
 
 .rounded-top {
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
+  border-top-left-radius: $rounding-size;
+  border-top-right-radius: $rounding-size;
 }
 
 .rounded-bottom {
-  border-bottom-left-radius: 0.25rem;
-  border-bottom-right-radius: 0.25rem;
+  border-bottom-left-radius: $rounding-size;
+  border-bottom-right-radius: $rounding-size;
 }
 
 .rounded-right {
-  border-bottom-right-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: $rounding-size;
+  border-top-right-radius: $rounding-size;
 }
 
 .rounded-left {
-  border-bottom-left-radius: 0.25rem;
-  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: $rounding-size;
+  border-top-left-radius: $rounding-size;
 }
 
 .circle {
     border-radius: 50% !important;
 }
 
-// shadow
+// borders
 
+.bordered {
+    border: 1px solid $secondary-color;
+}
+
+.bordered-top {
+    border-top: 1px solid $secondary-color;
+}
+
+.bordered-bottom {
+    border-bottom: 1px solid $secondary-color;
+}
+
+.bordered-left {
+    border-left: 1px solid $secondary-color;
+}
+
+.bordered-right {
+    border-right: 1px solid $secondary-color;
+}
+
+
+// shadow
+@for $i from 1 through 10 {
+    .shadow-#{$i} {
+        box-shadow: 0px 0px 3px -1px rgba(0, 0, 0, $i / 10);
+    }
+}
 
 // image sizing .is-36 .is-42 etc..
 @each $size-name, $size in $image-sizes {
