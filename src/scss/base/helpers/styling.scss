@@ -1,0 +1,12 @@
+// rounding
+
+// shadow
+
+
+// image sizing .is-36 .is-42 etc..
+@each $size-name, $size in $image-sizes {
+    .#{$size-name}{
+        width: $size;
+        height: $size;
+    }
+}

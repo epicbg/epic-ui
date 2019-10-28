@@ -1,0 +1,20 @@
+// Margin and padding helpers (configured in variables)
+// mt-1 pt-2 mr-1 etc...
+
+@each $prefix, $prop in $helper-types {
+    @for $i from $helper-loop-start through $helper-loop-length {
+        .#{$prefix}-#{$i} {
+            #{$prop}: #{$helper-scaling * $i}px;
+        }
+    }
+}
+
+
+// float
+
+.f-left {
+  float: left;
+}
+.f-right {
+  float: right
+}
