@@ -1,14 +1,24 @@
 @charset "utf-8";
 
+// TODO: Remove flexboxgrid import when our grid is ready
 @import '~flexboxgrid/dist/flexboxgrid.min.css';
 
+// Our grid system
+@import "./grid/all.scss";
 
+// utilities and general
 @import './utilities/all';
-
 @import './base/all';
-@import './components/all';
+
+// Forms
 @import './form/all';
+
+// Css framework styles
+@import './elements/all';
+@import './components/all';
 @import './snippets/all';
 @import './templates/all';
-@import './libs/swal'
 
+
+// Third party styling
+@import './libs/swal';
