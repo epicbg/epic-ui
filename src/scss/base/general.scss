@@ -13,6 +13,7 @@ body, form, button, section, a, input, textarea, select {
 a {
     color: #2c3e50;
     text-decoration: none;
+    cursor: pointer;
     &:hover {
         color: darken(#2c3e50, 20%);
     }
