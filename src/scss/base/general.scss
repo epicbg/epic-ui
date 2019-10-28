@@ -18,7 +18,9 @@ a {
     }
 }
 
-
+[toggles] {
+    cursor: pointer;
+}
 
 @for $i from 1 through 6 {
     h#{$i}{

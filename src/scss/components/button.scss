@@ -14,8 +14,8 @@
 
 @for $i from 0 to length($sizes) {
     .button.is-#{nth($sizes, $i + 1)}{
-        padding: #{$button-vertical-padding  + ($i * $button-vertical-padding)}px #{$button-default-padding + ($i * $button-default-padding)}px;  
-        font-size: #{$button-default-font-size + ($i*2)}px;
+        padding: #{$button-vertical-padding  + ($i * $button-vertical-padding / 2)}px #{$button-default-padding + ($i * $button-default-padding / 2)}px;  
+        font-size: #{$button-default-font-size + ($i*3)};
     }
 }
 
