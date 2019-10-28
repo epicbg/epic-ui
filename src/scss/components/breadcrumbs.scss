@@ -1,0 +1,31 @@
+ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: inherit;
+  content: "/\00a0";
+}
+ul.breadcrumb li a {
+  color: inherit;
+  text-decoration: none;
+}
+ul.breadcrumb.with-chevron > li+li:before {
+    content: "\f105";
+    font-family: FontAwesome;
+}
+
+ul.breadcrumb.with-dots > li+li:before {
+    content: "\f111";
+    font-family: FontAwesome;
+}
+
+ul.breadcrumb.with-o-dots > li+li:before {
+    content: "\f10c";
+    font-family: FontAwesome;
+}
