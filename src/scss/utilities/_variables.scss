@@ -3,6 +3,7 @@
 
 // Theme vars and colors
 
+
 $bg-color: #ffffff;
 
 $primary-color: #17004a;
@@ -109,3 +110,11 @@ $modal-padding: 30px;
 
 // Styling helpers styling.scss
 $rounding-size: 0.45rem;
+
+
+
+
+:root {
+    --primary-color: #{$primary-color};
+}
+  
